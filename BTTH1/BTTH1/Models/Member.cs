@@ -11,6 +11,10 @@ namespace BTTH1.Models
 
         public Guid CategoryMemberID { get; set; }
 
+        public string Username { get; set; }
+
+        public string Password { get; set; }
+
         public string Name { get; set; }
 
         public string Email { get; set; }
@@ -25,8 +29,19 @@ namespace BTTH1.Models
 
         public bool Status { get; set; }
 
-        public Member()
+        public Member(Guid categoryMemberID = default, string username = null, string password = null, string name = null, string email = null, string address = null, string phoneNunmber = null, DateTime birthDay = default)
         {
+            ID = Guid.NewGuid();
+            CategoryMemberID = categoryMemberID;
+            Username = username;
+            Password = password;
+            Name = name;
+            Email = email;
+            Address = address;
+            PhoneNunmber = phoneNunmber;
+            BirthDay = birthDay;
+            Salary = 0;
+            Status = true;
         }
 
         /// <summary>
@@ -65,16 +80,9 @@ namespace BTTH1.Models
         /// <param name="phoneNunmber"></param>
         /// <param name="birthDay"></param>
         /// <param name="salary"></param>
-        public Member(Guid categoryMemberID, string name, string email, string address, string phoneNunmber, DateTime birthDay, int salary, bool status)
-        {
-            CategoryMemberID = categoryMemberID;
-            Name = name;
-            Email = email;
-            Address = address;
-            PhoneNunmber = phoneNunmber;
-            BirthDay = birthDay;
-            Salary = salary;
-            Status = status;
-        }
+         
+             
+            
+         
     }
 }

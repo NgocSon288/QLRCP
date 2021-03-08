@@ -1,5 +1,4 @@
 C:\Desktop\HK2-năm 3\Ngôn ngữ lập trình C# - CS511.L21\BTTH\QLRCP\BTTH1\BTTH1\obj\Debug\BTTH1.csprojAssemblyReference.cache
-C:\Desktop\HK2-năm 3\Ngôn ngữ lập trình C# - CS511.L21\BTTH\QLRCP\BTTH1\BTTH1\obj\Debug\BTTH1.Form1.resources
 C:\Desktop\HK2-năm 3\Ngôn ngữ lập trình C# - CS511.L21\BTTH\QLRCP\BTTH1\BTTH1\obj\Debug\BTTH1.Properties.Resources.resources
 C:\Desktop\HK2-năm 3\Ngôn ngữ lập trình C# - CS511.L21\BTTH\QLRCP\BTTH1\BTTH1\obj\Debug\BTTH1.csproj.GenerateResource.cache
 C:\Desktop\HK2-năm 3\Ngôn ngữ lập trình C# - CS511.L21\BTTH\QLRCP\BTTH1\BTTH1\obj\Debug\BTTH1.csproj.CoreCompileInputs.cache
@@ -28,3 +27,5 @@ C:\Desktop\HK2-năm 3\Ngôn ngữ lập trình C# - CS511.L21\BTTH\QLRCP\BTTH1\B
 C:\Desktop\HK2-năm 3\Ngôn ngữ lập trình C# - CS511.L21\BTTH\QLRCP\BTTH1\BTTH1\obj\Debug\BTTH1.MemberUC.resources
 C:\Desktop\HK2-năm 3\Ngôn ngữ lập trình C# - CS511.L21\BTTH\QLRCP\BTTH1\BTTH1\obj\Debug\BTTH1.RegisMemberUC.resources
 C:\Desktop\HK2-năm 3\Ngôn ngữ lập trình C# - CS511.L21\BTTH\QLRCP\BTTH1\BTTH1\obj\Debug\BTTH1.FilmUC.resources
+C:\Desktop\HK2-năm 3\Ngôn ngữ lập trình C# - CS511.L21\BTTH\QLRCP\BTTH1\BTTH1\obj\Debug\BTTH1.fLogin.resources
+C:\Desktop\HK2-năm 3\Ngôn ngữ lập trình C# - CS511.L21\BTTH\QLRCP\BTTH1\BTTH1\obj\Debug\BTTH1.fMain.resources

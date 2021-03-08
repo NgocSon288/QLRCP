@@ -8,39 +8,45 @@ using System.Windows.Forms;
 
 namespace BTTH1
 {
-    public partial class Form1 : Form
+    public partial class fMain : Form
     {
         private readonly ICategoryMemberService _categoryMemberService;
 
         private IconButton currentBtn;
         private Panel leftBorderBtn;
 
-        public Form1()
+        private bool isHeighPermission = false; 
+
+        public fMain()
         {
-            InitializeComponent(); 
+            InitializeComponent();
 
             _categoryMemberService = new CategoryMemberService();
 
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 100);
             panelMenu.Controls.Add(leftBorderBtn);
-             
+
+            Load();
         }
 
         #region Events
 
         private void btn1_Click(object sender, System.EventArgs e)
         {
+            isHeighPermission = false;
+
             ActivateButton(sender);
 
             // Show user control tương ứng 
             var fHome = new HomeUC();
             UIHelper.ShowControl(fHome, panelContent);
-
         }
 
         private void btn2_Click(object sender, System.EventArgs e)
         {
+            isHeighPermission = false;
+
             ActivateButton(sender);
 
             var fFilm = new FilmUC();
@@ -49,19 +55,25 @@ namespace BTTH1
 
         private void btn3_Click(object sender, System.EventArgs e)
         {
+            isHeighPermission = true;
+
             ActivateButton(sender);
-             
+
             var fMember = new MemberUC();
             UIHelper.ShowControl(fMember, panelContent);
         }
 
         private void btn4_Click(object sender, System.EventArgs e)
         {
+            isHeighPermission = true;
+
             ActivateButton(sender);
         }
 
         private void btn5_Click(object sender, System.EventArgs e)
         {
+            isHeighPermission = true;
+
             ActivateButton(sender);
         }
 
@@ -69,9 +81,7 @@ namespace BTTH1
         {
             Reset();
 
-            // Show user control tương ứng 
-            var fHome = new HomeUC();
-            UIHelper.ShowControl(fHome, panelContent);
+            
         }
 
         private void button1_Click(object sender, System.EventArgs e)
@@ -81,16 +91,40 @@ namespace BTTH1
                 Application.Exit();
             }
         }
-          
+
         private void button2_Click(object sender, System.EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
         }
 
+        private void btnLogin_Click(object sender, System.EventArgs e)
+        {
+            if (Constants.CurrentMember == null)
+            {
+                Login();
+            }
+            else
+            {
+                Logout();
+
+                if (isHeighPermission)
+                {
+                    Reset();
+                }
+            }
+
+            isHeighPermission = false;
+            LoadLeftMenu();
+        }
         #endregion
 
 
         #region Method
+
+        new private void Load()
+        {
+            VisibleButton(Constants.PERMISSION_NULL);
+        }
 
         private void ActivateButton(object senderBtn)
         {
@@ -111,7 +145,7 @@ namespace BTTH1
                 leftBorderBtn.BackColor = Constants.BORDER_MENU_LEFT_COLOR;
                 leftBorderBtn.Location = new Point(0, currentBtn.Location.Y);
                 leftBorderBtn.Visible = true;
-                leftBorderBtn.BringToFront(); 
+                leftBorderBtn.BringToFront();
             }
         }
 
@@ -131,7 +165,69 @@ namespace BTTH1
         private void Reset()
         {
             DisableButton();
-            leftBorderBtn.Visible = false; 
+            leftBorderBtn.Visible = false;
+
+            // Show user control tương ứng 
+            var fHome = new HomeUC();
+            UIHelper.ShowControl(fHome, panelContent);
+        }
+
+        private void Login()
+        {
+            Form f = new fLogin();
+
+            f.ShowDialog();
+
+            if (Constants.CurrentMember != null)
+            {
+                btnLogin.Text = "Đăng xuất";
+
+                lblGreeting.Text = string.Format($"Xin chào {Constants.CurrentMember.Name}");
+            }
+        }
+
+        private void Logout()
+        {
+            Constants.CurrentMember = null;
+            btnLogin.Text = "Đăng nhập";
+
+            lblGreeting.Text = string.Format($"Xin chào quý khách");
+        }
+
+        private void LoadLeftMenu()
+        {
+            if (Constants.CurrentMember == null)
+            {
+                VisibleButton(Constants.PERMISSION_NULL);
+
+                return;
+            }
+
+            var category = _categoryMemberService.GetByID(Constants.CurrentMember.CategoryMemberID);
+            var permission = category.Name;
+
+            switch (permission)
+            {
+                case "Admin":
+                    VisibleButton(Constants.PERMISSION_ADMIN);
+                    break;
+                case "Staff":
+                    VisibleButton(Constants.PERMISSION_STAFF);
+                    break;
+                case "Customer":
+                    VisibleButton(Constants.PERMISSION_CUSTOMER);
+                    break;
+            }
+
+        }
+
+        private void VisibleButton(int[] btns)
+        {
+            btnHome.Visible = btns[0] == 1;
+            btnFilm.Visible = btns[1] == 1;
+            btnProfile.Visible = btns[2] == 1;
+            btnStaffMana.Visible = btns[3] == 1;
+            btnAdminMana.Visible = btns[4] == 1;
         }
 
         #endregion

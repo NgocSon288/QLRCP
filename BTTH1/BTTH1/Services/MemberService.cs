@@ -3,6 +3,7 @@ using BTTH1.Repository;
 using BTTH1.Repository.Interface;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace BTTH1.Services
 {
@@ -14,7 +15,9 @@ namespace BTTH1.Services
 
         List<Member> GetAll();
 
-        Member GetByID(Guid id); 
+        Member GetByID(Guid id);
+
+        Member GetByUsername(string username);
 
         bool DeleteAll();
 
@@ -51,6 +54,11 @@ namespace BTTH1.Services
         public Member GetByID(Guid id)
         {
             return _categoryMemberRepository.GetByID(id);
+        }
+
+        public Member GetByUsername(string username)
+        {
+            return GetAll().FirstOrDefault(m => m.Username == username);
         }
 
         public bool Insert(Member entity)
