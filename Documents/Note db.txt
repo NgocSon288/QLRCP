@@ -1,0 +1,40 @@
+Film
+	+ Thời lượng phim
+	+ số sao trung bình
+	+ danh sách diển viên
+	+ năm sản xuất
+
+
++ có nút mua, nhưng khi nhần vào kiểm tra, nếu chưa đăng nhập thì thông báo bạ cần đăng nhập
+
+
++ Chọn số vé: hiển thị số vé vé còn lại
+
+- Order
+	+ ID			+
+	+ MemberID		+
+	+ RoomID		room => id
+	+ FilmID		+ 
+	+ FilmName		+
+	+ TimeLong		+
+	+ DateShow		+
+	+ Count			numCount
+	+ Price			+
+
+	+ CreateDate
+	+ CreateBy	Guid
+	+ DeleteDate
+	+ DeleteBy	Guid
+	+ Status
+
+
+
+---> sau khi đặt hàng thì cập nhật lại số lượng còn lại
+
+
+
+
+
+
+
+

@@ -18,9 +18,12 @@ namespace BTTH1.Common
         /// <summary>
         /// Color
         /// </summary>
-        public static readonly Color BORDER_MENU_LEFT_COLOR = Color.FromArgb(249, 88, 155);
-        public static readonly Color ACTIVE_COLOR = Color.FromArgb(104, 188, 169);
-        public static readonly Color LEAVE_COLOR = Color.Black;
+        public static readonly Color BORDER_MENU_LEFT_COLOR = Color.FromArgb(249, 88, 155); // form
+        public static readonly Color ACTIVE_COLOR = Color.FromArgb(104, 188, 169);      // login
+        public static readonly Color LEAVE_COLOR = Color.Black;                         // login
+        public static readonly Color ACTIVE_LABEL_COLOR = Color.FromArgb(247, 129, 68); // home
+        public static readonly Color LEAVE_LABEL_COLOR = Color.FromArgb(68, 226, 255);  // home
+
 
         /// <summary>
         /// Permission
@@ -29,6 +32,18 @@ namespace BTTH1.Common
         public static readonly int[] PERMISSION_STAFF       = new int[] { 1, 1, 1, 1, 0 };
         public static readonly int[] PERMISSION_CUSTOMER    = new int[] { 1, 1, 1, 0, 0 };
         public static readonly int[] PERMISSION_NULL        = new int[] { 1, 1, 0, 0, 0 };
+
+        /// <summary>
+        /// Email
+        /// </summary>
+        public static readonly string FROM_EMAIL_ADDRESS = "sondeptrai2288@gmail.com";
+        public static readonly string FROM_EMAIL_DISPLAYNAME = "Huỳnh Ngọc Sơn";
+        public static readonly string FROM_EMAIL_PASSWORD = "SOn01698182219";
+        public static readonly string SMTP_HOST = "smtp.gmail.com";
+        public static readonly int SMTP_PORT = 587;
+        public static readonly bool ENABLED_SSL = true;
+
+
 
         public static Member CurrentMember = null;
     }

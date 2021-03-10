@@ -1,8 +1,6 @@
 ﻿using BTTH1.Common;
-using BTTH1.Models;
 using BTTH1.Services;
 using FontAwesome.Sharp;
-using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -11,21 +9,21 @@ namespace BTTH1
     public partial class fMain : Form
     {
         private readonly ICategoryMemberService _categoryMemberService;
+        private readonly ICategoryFilmService _categoryFilmService;
+        private readonly IFilmService _filmService;
 
         private IconButton currentBtn;
         private Panel leftBorderBtn;
 
-        private bool isHeighPermission = false; 
+        private bool isHeighPermission = false;
 
         public fMain()
         {
             InitializeComponent();
 
             _categoryMemberService = new CategoryMemberService();
-
-            leftBorderBtn = new Panel();
-            leftBorderBtn.Size = new Size(7, 100);
-            panelMenu.Controls.Add(leftBorderBtn);
+            _categoryFilmService = new CategoryFilmService();
+            _filmService = new FilmService();
 
             Load();
         }
@@ -38,7 +36,7 @@ namespace BTTH1
 
             ActivateButton(sender);
 
-            // Show user control tương ứng 
+            // Show user control tương ứng
             var fHome = new HomeUC();
             UIHelper.ShowControl(fHome, panelContent);
         }
@@ -80,8 +78,6 @@ namespace BTTH1
         private void pictureBox1_Click(object sender, System.EventArgs e)
         {
             Reset();
-
-            
         }
 
         private void button1_Click(object sender, System.EventArgs e)
@@ -116,14 +112,20 @@ namespace BTTH1
             isHeighPermission = false;
             LoadLeftMenu();
         }
-        #endregion
 
+        #endregion Events
 
         #region Method
 
         new private void Load()
         {
+            leftBorderBtn = new Panel();
+            leftBorderBtn.Size = new Size(7, 100);
+            panelMenu.Controls.Add(leftBorderBtn);
+
             VisibleButton(Constants.PERMISSION_NULL);
+
+            Reset();
         }
 
         private void ActivateButton(object senderBtn)
@@ -167,7 +169,7 @@ namespace BTTH1
             DisableButton();
             leftBorderBtn.Visible = false;
 
-            // Show user control tương ứng 
+            // Show user control tương ứng
             var fHome = new HomeUC();
             UIHelper.ShowControl(fHome, panelContent);
         }
@@ -211,14 +213,15 @@ namespace BTTH1
                 case "Admin":
                     VisibleButton(Constants.PERMISSION_ADMIN);
                     break;
+
                 case "Staff":
                     VisibleButton(Constants.PERMISSION_STAFF);
                     break;
+
                 case "Customer":
                     VisibleButton(Constants.PERMISSION_CUSTOMER);
                     break;
             }
-
         }
 
         private void VisibleButton(int[] btns)
@@ -230,7 +233,6 @@ namespace BTTH1
             btnAdminMana.Visible = btns[4] == 1;
         }
 
-        #endregion
-
+        #endregion Method
     }
 }

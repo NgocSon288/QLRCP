@@ -29,3 +29,4 @@ C:\Desktop\HK2-năm 3\Ngôn ngữ lập trình C# - CS511.L21\BTTH\QLRCP\BTTH1\B
 C:\Desktop\HK2-năm 3\Ngôn ngữ lập trình C# - CS511.L21\BTTH\QLRCP\BTTH1\BTTH1\obj\Debug\BTTH1.FilmUC.resources
 C:\Desktop\HK2-năm 3\Ngôn ngữ lập trình C# - CS511.L21\BTTH\QLRCP\BTTH1\BTTH1\obj\Debug\BTTH1.fLogin.resources
 C:\Desktop\HK2-năm 3\Ngôn ngữ lập trình C# - CS511.L21\BTTH\QLRCP\BTTH1\BTTH1\obj\Debug\BTTH1.fMain.resources
+C:\Desktop\HK2-năm 3\Ngôn ngữ lập trình C# - CS511.L21\BTTH\QLRCP\BTTH1\BTTH1\obj\Debug\BTTH1.DetailFilmUC.resources

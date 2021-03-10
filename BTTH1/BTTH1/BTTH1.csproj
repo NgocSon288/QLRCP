@@ -73,8 +73,15 @@
   <ItemGroup>
     <Compile Include="Common\Constants.cs" />
     <Compile Include="Common\Converters.cs" />
+    <Compile Include="Common\MailHelper.cs" />
     <Compile Include="Common\UIHelper.cs" />
     <Compile Include="Data\FileHelper.cs" />
+    <Compile Include="DetailFilmUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DetailFilmUC.Designer.cs">
+      <DependentUpon>DetailFilmUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="FilmUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -105,8 +112,13 @@
     <Compile Include="MemberUC.Designer.cs">
       <DependentUpon>MemberUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\CategoryFilm.cs" />
     <Compile Include="Models\CategoryMember.cs" />
+    <Compile Include="Models\Film.cs" />
     <Compile Include="Models\Member.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\Room.cs" />
+    <Compile Include="Models\RoomFilm.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegisMemberUC.cs">
@@ -115,14 +127,32 @@
     <Compile Include="RegisMemberUC.Designer.cs">
       <DependentUpon>RegisMemberUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="Repository\CategoryLilmRepository.cs" />
     <Compile Include="Repository\CategoryMemberRepository.cs" />
+    <Compile Include="Repository\FilmRepository.cs" />
+    <Compile Include="Repository\Interface\ICategoryFilmRepository.cs" />
     <Compile Include="Repository\Interface\ICategoryMemberRepository.cs" />
+    <Compile Include="Repository\Interface\IFilmRepository.cs" />
     <Compile Include="Repository\Interface\IMemberRepository.cs" />
     <Compile Include="Repository\Interface\IRepositoryBase.cs" />
+    <Compile Include="Repository\Interface\IRoomFilmRepository.cs" />
+    <Compile Include="Repository\Interface\IRoomRepository.cs" />
+    <Compile Include="Repository\Interface\IOrderRepository.cs" />
     <Compile Include="Repository\MemberRepository.cs" />
+    <Compile Include="Repository\OrderRepository.cs" />
     <Compile Include="Repository\RepositoryBase.cs" />
+    <Compile Include="Repository\RoomFilmRepository.cs" />
+    <Compile Include="Repository\RoomRepository.cs" />
+    <Compile Include="Services\CategoryFilmService.cs" />
     <Compile Include="Services\CategoryMemberService.cs" />
+    <Compile Include="Services\FilmService.cs" />
     <Compile Include="Services\MemberService.cs" />
+    <Compile Include="Services\OrderService.cs" />
+    <Compile Include="Services\RoomFilmService.cs" />
+    <Compile Include="Services\RoomService.cs" />
+    <EmbeddedResource Include="DetailFilmUC.resx">
+      <DependentUpon>DetailFilmUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FilmUC.resx">
       <DependentUpon>FilmUC.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,8 +197,27 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Assets\Template\neworder.html" />
+    <Content Include="DB\CategoryFilm.txt" />
     <Content Include="DB\CategoryMember.txt" />
+    <Content Include="DB\Film.txt" />
     <Content Include="DB\Member.txt" />
+    <Content Include="DB\Order.txt" />
+    <Content Include="DB\Room.txt" />
+    <Content Include="DB\RoomFilm.txt" />
+    <None Include="Resources\bg-image.png" />
+    <None Include="Resources\emoji.png" />
+    <None Include="Resources\trailer1.jfif" />
+    <None Include="Resources\film10.jpg" />
+    <None Include="Resources\film9.jpg" />
+    <None Include="Resources\film8.jpg" />
+    <None Include="Resources\film7.jpg" />
+    <None Include="Resources\film6.jpg" />
+    <None Include="Resources\film5.jpg" />
+    <None Include="Resources\film4.jpg" />
+    <None Include="Resources\film3.jpg" />
+    <None Include="Resources\film2.jpg" />
+    <None Include="Resources\film1.jpg" />
     <None Include="Resources\eye.png" />
     <None Include="Resources\btn-border.png" />
     <None Include="Resources\btn-background.png" />

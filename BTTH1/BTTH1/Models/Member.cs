@@ -29,6 +29,11 @@ namespace BTTH1.Models
 
         public bool Status { get; set; }
 
+        public Member()
+        {
+            ID = Guid.NewGuid();
+        }
+
         public Member(Guid categoryMemberID = default, string username = null, string password = null, string name = null, string email = null, string address = null, string phoneNunmber = null, DateTime birthDay = default)
         {
             ID = Guid.NewGuid();
@@ -80,9 +85,5 @@ namespace BTTH1.Models
         /// <param name="phoneNunmber"></param>
         /// <param name="birthDay"></param>
         /// <param name="salary"></param>
-         
-             
-            
-         
     }
 }

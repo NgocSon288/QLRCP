@@ -39,49 +39,55 @@ namespace BTTH1
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(285, 155);
+            this.textBox1.Location = new System.Drawing.Point(570, 298);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(196, 31);
             this.textBox1.TabIndex = 0;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(445, 155);
+            this.textBox2.Location = new System.Drawing.Point(890, 298);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.Size = new System.Drawing.Size(196, 31);
             this.textBox2.TabIndex = 1;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(614, 155);
+            this.textBox3.Location = new System.Drawing.Point(1228, 298);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.Size = new System.Drawing.Size(196, 31);
             this.textBox3.TabIndex = 2;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(285, 224);
+            this.textBox4.Location = new System.Drawing.Point(570, 431);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
+            this.textBox4.Size = new System.Drawing.Size(196, 31);
             this.textBox4.TabIndex = 3;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(445, 224);
+            this.textBox5.Location = new System.Drawing.Point(890, 431);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
+            this.textBox5.Size = new System.Drawing.Size(196, 31);
             this.textBox5.TabIndex = 4;
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(614, 224);
+            this.textBox6.Location = new System.Drawing.Point(1228, 431);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
+            this.textBox6.Size = new System.Drawing.Size(196, 31);
             this.textBox6.TabIndex = 5;
             // 
             // RegisMemberUC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
@@ -89,8 +95,9 @@ namespace BTTH1
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "RegisMemberUC";
-            this.Size = new System.Drawing.Size(964, 701);
+            this.Size = new System.Drawing.Size(1928, 1300);
             this.ResumeLayout(false);
             this.PerformLayout();
 

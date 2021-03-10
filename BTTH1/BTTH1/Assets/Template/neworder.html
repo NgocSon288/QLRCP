@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Thông tin đơn hàng  mới từ khách hàng {{MemberName}}</title>
+</head>
+<body>
+    Xin chào <strong><b>{{MemberName}}</b></strong>, <br />
+
+    Cảm ơn quý khách đã đặt vé, mã đơn hàng của bạn là:
+    <span style="color: rgb(68, 226, 255);font-weight: bold; cursor: pointer;">#{{OrderID}}</span>.
+    <br />
+    <br />
+
+    <span style="color: rgb(68, 226, 255);font-weight: bold; cursor: pointer;">THÔNG TIN ĐƠN HÀNG:</span>
+
+    <table style="width: 100%; border: 1px solid rgb(68, 226, 255); border-collapse: collapse; padding: 5px;">
+        <thead>
+            <tr style="border: 1px solid rgb(68, 226, 255); border-collapse: collapse; padding: 5px;">
+                <th style="border: 1px solid rgb(68, 226, 255); border-collapse: collapse; padding: 5px;">Tên phim</th>
+                <th style="border: 1px solid rgb(68, 226, 255); border-collapse: collapse; padding: 5px;">Thể loại</th>
+                <th style="border: 1px solid rgb(68, 226, 255); border-collapse: collapse; padding: 5px;">Giá</th>
+                <th style="border: 1px solid rgb(68, 226, 255); border-collapse: collapse; padding: 5px;">Số lượng</th>
+                <th style="border: 1px solid rgb(68, 226, 255); border-collapse: collapse; padding: 5px;">Thời gian chiếu</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr style="border: 1px solid rgb(68, 226, 255); border-collapse: collapse; padding: 5px;">
+                <td style="border: 1px solid rgb(68, 226, 255); border-collapse: collapse; padding: 5px;">{{Name}}</td>
+                <td style="border: 1px solid rgb(68, 226, 255); border-collapse: collapse; padding: 5px;">{{Category}}</td>
+                <td style="border: 1px solid rgb(68, 226, 255); border-collapse: collapse; padding: 5px;">{{Price}}</td>
+                <td style="border: 1px solid rgb(68, 226, 255); border-collapse: collapse; padding: 5px;">{{Count}}</td>
+                <td style="border: 1px solid rgb(68, 226, 255); border-collapse: collapse; padding: 5px;">{{DateShow}}</td>
+            </tr>
+            <tr>
+                <td colspan="4" style="border: 1px solid rgb(68, 226, 255); border-collapse: collapse; padding: 5px;">Tổng tiền: </td>
+                <td style="border: 1px solid rgb(68, 226, 255); border-collapse: collapse; padding: 5px;">{{TotalPrice}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br />
+    <br />
+
+    ------------------------------------------------------- <br />
+    Huỳnh Ngọc Sơn  <br />
+    Student - University of Information Technology – Vietnam National University HCMC   <br />
+    Mobile: <b>0359521032</b>   <br />
+    Facebook: <a href="https://m.me/HuynhNgocSon123">https://m.me/HuynhNgocSon123</a> <br />
+</body>
+</html>

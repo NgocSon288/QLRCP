@@ -16,6 +16,7 @@ namespace BTTH1.Common
             control.Dock = DockStyle.Fill;
             control.BringToFront();
             control.Focus();
+
             content.BringToFront();
 
             content.Controls.Add(control);

@@ -1,10 +1,7 @@
 ﻿using BTTH1.Common;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BTTH1.Models
 {
@@ -16,7 +13,7 @@ namespace BTTH1.Models
 
         public CategoryMember()
         {
-
+            ID = Guid.NewGuid();
         }
 
         public CategoryMember(List<object> objValues)

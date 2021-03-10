@@ -45,6 +45,10 @@ namespace BTTH1.Common
             {
                 return Boolean.Parse(value);
             }
+            else if (type.Name == "Decimal")
+            {
+                return Decimal.Parse(value);
+            }
             else
             {
                 return value;

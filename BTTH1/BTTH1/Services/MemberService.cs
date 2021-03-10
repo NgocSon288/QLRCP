@@ -28,32 +28,32 @@ namespace BTTH1.Services
 
     public class MemberService : IMemberService
     {
-        private readonly IMemberRepository _categoryMemberRepository;
+        private readonly IMemberRepository _memberRepository;
 
 
         public MemberService()
         {
-            this._categoryMemberRepository = new MemberRepository();
+            this._memberRepository = new MemberRepository();
         }
 
         public bool DeleteAll()
         {
-            return _categoryMemberRepository.DeleteAll();
+            return _memberRepository.DeleteAll();
         }
 
         public bool DeleteByID(Guid id)
         {
-            return _categoryMemberRepository.DeleteByID(id);
+            return _memberRepository.DeleteByID(id);
         }
 
         public List<Member> GetAll()
         {
-            return _categoryMemberRepository.GetAll();
+            return _memberRepository.GetAll();
         }
 
         public Member GetByID(Guid id)
         {
-            return _categoryMemberRepository.GetByID(id);
+            return _memberRepository.GetByID(id);
         }
 
         public Member GetByUsername(string username)
@@ -63,17 +63,17 @@ namespace BTTH1.Services
 
         public bool Insert(Member entity)
         {
-            return _categoryMemberRepository.Insert(entity);
+            return _memberRepository.Insert(entity);
         }
 
         public bool InsertRange(List<Member> entities, bool isOveride = true)
         {
-            return _categoryMemberRepository.InsertRange(entities, isOveride);
+            return _memberRepository.InsertRange(entities, isOveride);
         }
 
         public bool Update(Member entity)
         {
-            return _categoryMemberRepository.Update(entity);
+            return _memberRepository.Update(entity);
         }
     }
 }
