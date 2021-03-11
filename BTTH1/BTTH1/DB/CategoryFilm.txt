@@ -1,5 +1,5 @@
-c2f0752e-5343-4c87-9c3a-32207c0af7d9CS511Phim hành động
-688ff84d-a36d-4657-8abf-c3510f7362beCS511Phim viễn tưởng
-c7ff3751-7305-498c-b3e9-d713a4cc331bCS511Tình cảm
-912f0ead-3177-4530-a8e2-cf4cf3dbae71CS511Phim thần thoại
-a5e32418-6d0d-4881-801b-2953d39bfdbaCS511Phim cổ trang
+c2f0752e-5343-4c87-9c3a-32207c0af7d9CS511Hành Động
+688ff84d-a36d-4657-8abf-c3510f7362beCS511Viễn Tưởng
+c7ff3751-7305-498c-b3e9-d713a4cc331bCS511Tình Cảm
+912f0ead-3177-4530-a8e2-cf4cf3dbae71CS511Thần Thoại
+a5e32418-6d0d-4881-801b-2953d39bfdbaCS511Cổ Trang

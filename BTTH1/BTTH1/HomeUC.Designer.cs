@@ -136,7 +136,7 @@ namespace BTTH1
             this.lblName3.Size = new System.Drawing.Size(124, 39);
             this.lblName3.TabIndex = 1;
             this.lblName3.Text = "lblFilm1";
-            this.lblName3.Click += new System.EventHandler(this.lblName1_Click);
+            this.lblName3.Click += new System.EventHandler(this.img1_Click);
             this.lblName3.MouseEnter += new System.EventHandler(this.lblName1_MouseEnter);
             this.lblName3.MouseLeave += new System.EventHandler(this.lblName1_MouseLeave);
             // 
@@ -195,7 +195,7 @@ namespace BTTH1
             this.lblName2.Size = new System.Drawing.Size(124, 39);
             this.lblName2.TabIndex = 1;
             this.lblName2.Text = "lblFilm1";
-            this.lblName2.Click += new System.EventHandler(this.lblName1_Click);
+            this.lblName2.Click += new System.EventHandler(this.img1_Click);
             this.lblName2.MouseEnter += new System.EventHandler(this.lblName1_MouseEnter);
             this.lblName2.MouseLeave += new System.EventHandler(this.lblName1_MouseLeave);
             // 
@@ -256,7 +256,7 @@ namespace BTTH1
             this.lblName1.Size = new System.Drawing.Size(325, 39);
             this.lblName1.TabIndex = 1;
             this.lblName1.Text = " Trăng Sáng Mùa Đông";
-            this.lblName1.Click += new System.EventHandler(this.lblName1_Click);
+            this.lblName1.Click += new System.EventHandler(this.img1_Click);
             this.lblName1.MouseEnter += new System.EventHandler(this.lblName1_MouseEnter);
             this.lblName1.MouseLeave += new System.EventHandler(this.lblName1_MouseLeave);
             // 

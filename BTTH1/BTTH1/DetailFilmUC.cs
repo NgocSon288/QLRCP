@@ -25,7 +25,9 @@ namespace BTTH1
         private RoomFilm roomFilmSelected;
         private Room roomSelected;
 
-        public DetailFilmUC(Film film)
+        private PREVIOUS_FROM previousForm;
+
+        public DetailFilmUC(Film film, PREVIOUS_FROM pre = PREVIOUS_FROM.DETAIL)
         {
             InitializeComponent();
 
@@ -35,6 +37,7 @@ namespace BTTH1
             _orderService = new OrderService();
 
             this.film = film;
+            this.previousForm = pre;
 
             Load();
         }
@@ -68,7 +71,18 @@ namespace BTTH1
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            UIHelper.ShowControl(new HomeUC(), panelContent);
+            switch (previousForm)
+            {
+                case PREVIOUS_FROM.HOME:
+                    UIHelper.ShowControl(new HomeUC(), panelContent);
+                    break;
+                case PREVIOUS_FROM.FILM:
+                    UIHelper.ShowControl(new FilmUC(), panelContent);
+                    break;
+                default:
+                    UIHelper.ShowControl(new DetailFilmUC(film), panelContent);
+                    break;
+            }
         }
 
         #endregion Envents

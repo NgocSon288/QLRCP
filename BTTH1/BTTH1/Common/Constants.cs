@@ -15,6 +15,17 @@ namespace BTTH1.Common
         public static readonly string BASE_FILE_PATH = "../../DB/";
         public static readonly string MEMBER_FILE_PATH = BASE_FILE_PATH + "Member.txt";
 
+
+        /// <summary>
+        /// Component params
+        /// </summary>
+        public static readonly int WIDTH_PAGINATION = 70;
+        public static readonly int HEIGHT_PAGINATION = 70;
+        public static readonly int WIDTH_CATEGORY_BUTTON = 200;
+        public static readonly int HEIGHT_CATEGORY_BUTTON = 70;
+        public static readonly int FONTSIZE_CATEGORY_BUTTON = 10;
+
+
         /// <summary>
         /// Color
         /// </summary>
@@ -23,6 +34,11 @@ namespace BTTH1.Common
         public static readonly Color LEAVE_COLOR = Color.Black;                         // login
         public static readonly Color ACTIVE_LABEL_COLOR = Color.FromArgb(247, 129, 68); // home
         public static readonly Color LEAVE_LABEL_COLOR = Color.FromArgb(68, 226, 255);  // home
+        public static readonly Color ACTIVE_PAGINATION_BG_COLOR = Color.FromArgb(58, 216, 245);  // Film
+        public static readonly Color LEAVE_PAGINATION_BG_COLOR = Color.FromArgb(40, 40, 40);  // Film
+        public static readonly Color ACTIVE_CATEGORY_BUTTON_BG_COLOR = Color.FromArgb(58, 216, 245);  // Film
+        public static readonly Color LEAVE_CATEGORY_BUTTON_BG_COLOR = Color.FromArgb(40, 40, 40);  // Film
+
 
 
         /// <summary>
@@ -43,8 +59,13 @@ namespace BTTH1.Common
         public static readonly int SMTP_PORT = 587;
         public static readonly bool ENABLED_SSL = true;
 
-
-
         public static Member CurrentMember = null;
+    }
+
+    public enum PREVIOUS_FROM
+    {
+        DETAIL,
+        HOME,
+        FILM
     }
 }

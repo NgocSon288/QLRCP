@@ -3,7 +3,6 @@ using BTTH1.Models;
 using BTTH1.Services;
 using System;
 using System.Drawing;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace BTTH1
@@ -12,7 +11,6 @@ namespace BTTH1
     {
         private readonly IFilmService _filmService;
         private readonly IRoomFilmService _roomFilmService;
-
 
         public HomeUC()
         {
@@ -23,8 +21,6 @@ namespace BTTH1
 
             Load();
         }
-
-
 
         #region Methods
 
@@ -37,18 +33,17 @@ namespace BTTH1
         {
             var films = _filmService.GetByTopCount(3);
 
-
-            img1.BackgroundImage = new Bitmap(@"../../Resources/" + films[0].Image);
-            img2.BackgroundImage = new Bitmap(@"../../Resources/" + films[1].Image);
-            img3.BackgroundImage = new Bitmap(@"../../Resources/" + films[2].Image);
+            img1.BackgroundImage = new Bitmap("../../Resources/" + films[0].Image);
+            img2.BackgroundImage = new Bitmap("../../Resources/" + films[1].Image);
+            img3.BackgroundImage = new Bitmap("../../Resources/" + films[2].Image);
 
             lblName1.Text = films[0].Name.ToUpper().Replace("-", "-\n");
             lblName2.Text = films[1].Name.ToUpper().Replace("-", "-\n");
             lblName3.Text = films[2].Name.ToUpper().Replace("-", "-\n");
 
             lblTime1.Text = "Ngày chiếu: " + _roomFilmService.GetByFilmID(films[0].ID)[0].DateShow.ToShortDateString();
-            lblTime2.Text = "Ngày chiếu: " + _roomFilmService.GetByFilmID(films[1].ID)[1].DateShow.ToShortDateString();
-            lblTime3.Text = "Ngày chiếu: " + _roomFilmService.GetByFilmID(films[2].ID)[2].DateShow.ToShortDateString();
+            lblTime2.Text = "Ngày chiếu: " + _roomFilmService.GetByFilmID(films[1].ID)[0].DateShow.ToShortDateString();
+            lblTime3.Text = "Ngày chiếu: " + _roomFilmService.GetByFilmID(films[2].ID)[0].DateShow.ToShortDateString();
 
             img1.Tag = films[0];
             img2.Tag = films[1];
@@ -60,6 +55,8 @@ namespace BTTH1
         }
 
         #endregion Methods
+
+        #region UI
 
         [Obsolete]
         private void img1_MouseHover(object sender, EventArgs e)
@@ -85,12 +82,14 @@ namespace BTTH1
 
         private void img1_Click(object sender, EventArgs e)
         {
-            UIHelper.ShowControl(new DetailFilmUC((sender as PictureBox)?.Tag as Film), panelContent);
+            var ptb = sender as PictureBox;
+            var lbl = sender as Label;
+
+            var film = ptb != null ? ptb.Tag as Film : lbl.Tag as Film;
+
+            UIHelper.ShowControl(new DetailFilmUC(film, PREVIOUS_FROM.HOME), panelContent);
         }
 
-        private void lblName1_Click(object sender, EventArgs e)
-        {
-            UIHelper.ShowControl(new DetailFilmUC((sender as PictureBox)?.Tag as Film), panelContent);
-        }
+        #endregion UI
     }
 }
