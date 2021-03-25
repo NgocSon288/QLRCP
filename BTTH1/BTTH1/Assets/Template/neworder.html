@@ -4,39 +4,62 @@
 <head>
     <meta charset="utf-8" />
     <title>Thông tin đơn hàng  mới từ khách hàng {{MemberName}}</title>
+    <style>
+        .span-id {
+            color: rgb(68, 226, 255);
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        table, tr, th, td {
+            border: 1px solid rgb(68, 226, 255);
+            border-collapse: collapse;
+            padding: 5px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        .div-footer {
+            color: mediumpurple;
+        }
+    </style>
 </head>
 <body>
-    Xin chào <strong><b>{{MemberName}}</b></strong>, <br />
+    Xin chào <strong><b>{{MemberName}}</b></strong>, <br /><br />
 
     Cảm ơn quý khách đã đặt vé, mã đơn hàng của bạn là:
-    <span style="color: rgb(68, 226, 255);font-weight: bold; cursor: pointer;">#{{OrderID}}</span>.
+    <span class="span-id">#{{OrderID}}</span>.
     <br />
     <br />
 
-    <span style="color: rgb(68, 226, 255);font-weight: bold; cursor: pointer;">THÔNG TIN ĐƠN HÀNG:</span>
+    <span class="span-id">THÔNG TIN ĐƠN HÀNG:</span>
 
-    <table style="width: 100%; border: 1px solid rgb(68, 226, 255); border-collapse: collapse; padding: 5px;">
+    <table>
         <thead>
-            <tr style="border: 1px solid rgb(68, 226, 255); border-collapse: collapse; padding: 5px;">
-                <th style="border: 1px solid rgb(68, 226, 255); border-collapse: collapse; padding: 5px;">Tên phim</th>
-                <th style="border: 1px solid rgb(68, 226, 255); border-collapse: collapse; padding: 5px;">Thể loại</th>
-                <th style="border: 1px solid rgb(68, 226, 255); border-collapse: collapse; padding: 5px;">Giá</th>
-                <th style="border: 1px solid rgb(68, 226, 255); border-collapse: collapse; padding: 5px;">Số lượng</th>
-                <th style="border: 1px solid rgb(68, 226, 255); border-collapse: collapse; padding: 5px;">Thời gian chiếu</th>
+            <tr>
+                <th>Tên phim</th>
+                <th>Thể loại</th>
+                <th>Giá</th>
+                <th>Số lượng</th>
+                <th>Thời gian chiếu</th>
+                <th>Vị trí ghế</th>
             </tr>
         </thead>
 
         <tbody>
-            <tr style="border: 1px solid rgb(68, 226, 255); border-collapse: collapse; padding: 5px;">
-                <td style="border: 1px solid rgb(68, 226, 255); border-collapse: collapse; padding: 5px;">{{Name}}</td>
-                <td style="border: 1px solid rgb(68, 226, 255); border-collapse: collapse; padding: 5px;">{{Category}}</td>
-                <td style="border: 1px solid rgb(68, 226, 255); border-collapse: collapse; padding: 5px;">{{Price}}</td>
-                <td style="border: 1px solid rgb(68, 226, 255); border-collapse: collapse; padding: 5px;">{{Count}}</td>
-                <td style="border: 1px solid rgb(68, 226, 255); border-collapse: collapse; padding: 5px;">{{DateShow}}</td>
+            <tr>
+                <td>{{Name}}</td>
+                <td>{{Category}}</td>
+                <td>{{Price}}</td>
+                <td>{{Count}}</td>
+                <td>{{DateShow}}</td>
+                <td>{{Seat}}</td>
             </tr>
             <tr>
-                <td colspan="4" style="border: 1px solid rgb(68, 226, 255); border-collapse: collapse; padding: 5px;">Tổng tiền: </td>
-                <td style="border: 1px solid rgb(68, 226, 255); border-collapse: collapse; padding: 5px;">{{TotalPrice}}</td>
+                <td colspan="5">Tổng tiền: </td>
+                <td>{{TotalPrice}}</td>
             </tr>
         </tbody>
     </table>
@@ -44,10 +67,12 @@
     <br />
     <br />
 
-    ------------------------------------------------------- <br />
-    Huỳnh Ngọc Sơn  <br />
-    Student - University of Information Technology – Vietnam National University HCMC   <br />
-    Mobile: <b>0359521032</b>   <br />
-    Facebook: <a href="https://m.me/HuynhNgocSon123">https://m.me/HuynhNgocSon123</a> <br />
+    <div class="div-footer">
+        ------------------------------------------------------- <br />
+        Huỳnh Ngọc Sơn  <br />
+        Student - University of Information Technology – Vietnam National University HCMC   <br />
+        Mobile: <b>0359521032</b>   <br />
+        Facebook: <a href="https://m.me/HuynhNgocSon123">https://m.me/HuynhNgocSon123</a> <br />
+    </div>
 </body>
 </html>

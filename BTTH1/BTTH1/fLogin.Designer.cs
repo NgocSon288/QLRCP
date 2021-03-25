@@ -117,6 +117,7 @@ namespace BTTH1
             this.pictureBox2.Size = new System.Drawing.Size(54, 53);
             this.pictureBox2.TabIndex = 25;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // linkForgetPassword
             // 
@@ -126,8 +127,7 @@ namespace BTTH1
             this.linkForgetPassword.Location = new System.Drawing.Point(26, 877);
             this.linkForgetPassword.Name = "linkForgetPassword";
             this.linkForgetPassword.Size = new System.Drawing.Size(183, 33);
-            this.linkForgetPassword.TabIndex = 24;
-            this.linkForgetPassword.TabStop = true;
+            this.linkForgetPassword.TabIndex = 5;
             this.linkForgetPassword.Text = "Quên mật khẩu";
             // 
             // linkRegist
@@ -138,8 +138,7 @@ namespace BTTH1
             this.linkRegist.Location = new System.Drawing.Point(461, 877);
             this.linkRegist.Name = "linkRegist";
             this.linkRegist.Size = new System.Drawing.Size(102, 33);
-            this.linkRegist.TabIndex = 23;
-            this.linkRegist.TabStop = true;
+            this.linkRegist.TabIndex = 6;
             this.linkRegist.Text = "Đăng ký";
             // 
             // txtPassword
@@ -148,10 +147,11 @@ namespace BTTH1
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Calibri", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.Black;
-            this.txtPassword.Location = new System.Drawing.Point(104, 648);
+            this.txtPassword.Location = new System.Drawing.Point(104, 658);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(400, 85);
-            this.txtPassword.TabIndex = 22;
+            this.txtPassword.TabIndex = 2;
+            this.txtPassword.Text = "admin";
             this.txtPassword.UseSystemPasswordChar = true;
             this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
             this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsername_KeyPress);
@@ -182,10 +182,11 @@ namespace BTTH1
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsername.Font = new System.Drawing.Font("Calibri", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.ForeColor = System.Drawing.Color.Black;
-            this.txtUsername.Location = new System.Drawing.Point(104, 524);
+            this.txtUsername.Location = new System.Drawing.Point(104, 534);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(400, 85);
-            this.txtUsername.TabIndex = 19;
+            this.txtUsername.TabIndex = 1;
+            this.txtUsername.Text = "admin";
             this.txtUsername.Enter += new System.EventHandler(this.txtUsername_Enter);
             this.txtUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsername_KeyPress);
             this.txtUsername.Leave += new System.EventHandler(this.txtUsername_Leave);

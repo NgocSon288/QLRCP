@@ -44,6 +44,7 @@ namespace BTTH1
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panelContent = new System.Windows.Forms.Panel();
+            this.btnAvatar = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -87,6 +88,7 @@ namespace BTTH1
             this.btnLogin.Padding = new System.Windows.Forms.Padding(20, 0, 40, 0);
             this.btnLogin.Size = new System.Drawing.Size(440, 102);
             this.btnLogin.TabIndex = 6;
+            this.btnLogin.TabStop = false;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -113,6 +115,7 @@ namespace BTTH1
             this.btnAdminMana.Padding = new System.Windows.Forms.Padding(20, 0, 40, 0);
             this.btnAdminMana.Size = new System.Drawing.Size(440, 102);
             this.btnAdminMana.TabIndex = 5;
+            this.btnAdminMana.TabStop = false;
             this.btnAdminMana.Text = "Quản lý NV";
             this.btnAdminMana.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAdminMana.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -139,6 +142,7 @@ namespace BTTH1
             this.btnStaffMana.Padding = new System.Windows.Forms.Padding(20, 0, 40, 0);
             this.btnStaffMana.Size = new System.Drawing.Size(440, 102);
             this.btnStaffMana.TabIndex = 4;
+            this.btnStaffMana.TabStop = false;
             this.btnStaffMana.Text = "Quản lý KH";
             this.btnStaffMana.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStaffMana.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -165,6 +169,7 @@ namespace BTTH1
             this.btnProfile.Padding = new System.Windows.Forms.Padding(20, 0, 40, 0);
             this.btnProfile.Size = new System.Drawing.Size(440, 102);
             this.btnProfile.TabIndex = 3;
+            this.btnProfile.TabStop = false;
             this.btnProfile.Text = "Cá  nhân";
             this.btnProfile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProfile.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -191,6 +196,7 @@ namespace BTTH1
             this.btnFilm.Padding = new System.Windows.Forms.Padding(20, 0, 40, 0);
             this.btnFilm.Size = new System.Drawing.Size(440, 102);
             this.btnFilm.TabIndex = 2;
+            this.btnFilm.TabStop = false;
             this.btnFilm.Text = "Phim";
             this.btnFilm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFilm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -217,6 +223,7 @@ namespace BTTH1
             this.btnHome.Padding = new System.Windows.Forms.Padding(20, 0, 40, 0);
             this.btnHome.Size = new System.Drawing.Size(440, 102);
             this.btnHome.TabIndex = 1;
+            this.btnHome.TabStop = false;
             this.btnHome.Text = "Trang chủ";
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -251,6 +258,7 @@ namespace BTTH1
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.panel1.Controls.Add(this.btnAvatar);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lblGreeting);
             this.panel1.Controls.Add(this.button2);
@@ -277,7 +285,7 @@ namespace BTTH1
             this.lblGreeting.AutoSize = true;
             this.lblGreeting.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGreeting.ForeColor = System.Drawing.Color.White;
-            this.lblGreeting.Location = new System.Drawing.Point(22, 19);
+            this.lblGreeting.Location = new System.Drawing.Point(186, 19);
             this.lblGreeting.Name = "lblGreeting";
             this.lblGreeting.Size = new System.Drawing.Size(412, 59);
             this.lblGreeting.TabIndex = 2;
@@ -297,6 +305,7 @@ namespace BTTH1
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(60, 58);
             this.button2.TabIndex = 1;
+            this.button2.TabStop = false;
             this.button2.Text = "--";
             this.button2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button2.UseVisualStyleBackColor = false;
@@ -316,6 +325,7 @@ namespace BTTH1
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(60, 58);
             this.button1.TabIndex = 0;
+            this.button1.TabStop = false;
             this.button1.Text = "X";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -328,6 +338,18 @@ namespace BTTH1
             this.panelContent.Name = "panelContent";
             this.panelContent.Size = new System.Drawing.Size(1928, 1300);
             this.panelContent.TabIndex = 2;
+            // 
+            // btnAvatar
+            // 
+            this.btnAvatar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAvatar.FlatAppearance.BorderSize = 0;
+            this.btnAvatar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAvatar.Location = new System.Drawing.Point(10, 5);
+            this.btnAvatar.Name = "btnAvatar";
+            this.btnAvatar.Size = new System.Drawing.Size(150, 150);
+            this.btnAvatar.TabIndex = 4;
+            this.btnAvatar.UseVisualStyleBackColor = false;
             // 
             // fMain
             // 
@@ -368,5 +390,6 @@ namespace BTTH1
         private FontAwesome.Sharp.IconButton btnLogin;
         private System.Windows.Forms.Label lblGreeting;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnAvatar;
     }
 }

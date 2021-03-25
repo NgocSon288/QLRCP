@@ -30,6 +30,7 @@ namespace BTTH1.Models
 
         public decimal Price { get; set; }
 
+        public string Seat { get; set; }
 
         public DateTime CreatedDate { get; set; }
 
@@ -73,7 +74,7 @@ namespace BTTH1.Models
             }
         }
 
-        public Order(Guid roomID, Guid filmID, string filmName, string categoryFilmName, int timeLong, DateTime dateShow, int count, decimal price)
+        public Order(Guid roomID, Guid filmID, string filmName, string categoryFilmName, int timeLong, DateTime dateShow, int count, decimal price, string seat)
         {
             ID = Guid.NewGuid();
             MemberID = Constants.CurrentMember.ID;
@@ -85,6 +86,7 @@ namespace BTTH1.Models
             DateShow = dateShow;
             Count = count;
             Price = price;
+            Seat = seat;
             CreatedDate = DateTime.Now;
             CreatedBy = Constants.CurrentMember.ID;
             DeletedDate = DateTime.Now;

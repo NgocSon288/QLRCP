@@ -1,7 +1,11 @@
 ﻿using BTTH1.Common;
+using BTTH1.Models;
 using BTTH1.Services;
 using FontAwesome.Sharp;
+using System;
+using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
 namespace BTTH1
@@ -24,6 +28,9 @@ namespace BTTH1
             _categoryMemberService = new CategoryMemberService();
             _categoryFilmService = new CategoryFilmService();
             _filmService = new FilmService();
+
+            Constants.MainForm = this;
+            Constants.Root = panelContent;
 
             Load();
         }
@@ -126,6 +133,8 @@ namespace BTTH1
             VisibleButton(Constants.PERMISSION_NULL);
 
             Reset();
+
+            
         }
 
         private void ActivateButton(object senderBtn)
@@ -184,7 +193,7 @@ namespace BTTH1
             {
                 btnLogin.Text = "Đăng xuất";
 
-                lblGreeting.Text = string.Format($"Xin chào {Constants.CurrentMember.Name}");
+                LoadHeader();
             }
         }
 
@@ -193,7 +202,7 @@ namespace BTTH1
             Constants.CurrentMember = null;
             btnLogin.Text = "Đăng nhập";
 
-            lblGreeting.Text = string.Format($"Xin chào quý khách");
+            LoadHeader();
         }
 
         private void LoadLeftMenu()
@@ -234,5 +243,27 @@ namespace BTTH1
         }
 
         #endregion Method
+
+
+
+
+        public void LoadHeader()
+        {
+            if (Constants.CurrentMember == null)
+            {
+                lblGreeting.Text = string.Format($"Xin chào quý khách");
+                btnAvatar.BackgroundImage = null;
+            }
+            else
+            {
+                lblGreeting.Text = string.Format($"Xin chào {Constants.CurrentMember.Name}");
+                Image StartImage = Image.FromFile("../../Assets/Images/" + Constants.CurrentMember.Avatar); 
+                Image RoundedImage = UIHelper.ClipToCircle(StartImage, Color.FromArgb(31, 30, 68));
+                btnAvatar.BackgroundImage = RoundedImage;
+            }
+
+            
+        }
+
     }
 }

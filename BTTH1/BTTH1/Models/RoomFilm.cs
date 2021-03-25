@@ -17,6 +17,8 @@ namespace BTTH1.Models
 
         public bool Status { get; set; }
 
+        public string Seat { get; set; }
+
         public RoomFilm()
         {
             ID = Guid.NewGuid();
@@ -46,13 +48,14 @@ namespace BTTH1.Models
             }
         }
 
-        public RoomFilm(Guid roomID, Guid filmID, DateTime dateShow)
+        public RoomFilm(Guid roomID, Guid filmID, DateTime dateShow, int seatCount)
         {
             ID = Guid.NewGuid();
             RoomID = roomID;
             FilmID = filmID;
             DateShow = dateShow;
             Status = true;
+            Seat = "".PadLeft(seatCount, '1');
         }
     }
 }

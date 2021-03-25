@@ -30,6 +30,7 @@ namespace BTTH1
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnBack = new FontAwesome.Sharp.IconButton();
             this.pnlOrder = new System.Windows.Forms.Panel();
             this.cbpRoom = new System.Windows.Forms.ComboBox();
             this.lblTotalPrice = new System.Windows.Forms.Label();
@@ -37,20 +38,21 @@ namespace BTTH1
             this.pnlWait = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
             this.btnOrder = new System.Windows.Forms.Button();
+            this.lblDateShow = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.numCount = new System.Windows.Forms.NumericUpDown();
             this.lblSeatCount = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.lblPrice = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblDescription = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.pnlTitleFilmName = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lblDateShow = new System.Windows.Forms.Label();
+            this.lblTitleFilmName = new System.Windows.Forms.Label();
             this.lblLanguage = new System.Windows.Forms.Label();
             this.lblOrderCount = new System.Windows.Forms.Label();
             this.lblCategory = new System.Windows.Forms.Label();
@@ -58,7 +60,6 @@ namespace BTTH1
             this.lblYear = new System.Windows.Forms.Label();
             this.lblNational = new System.Windows.Forms.Label();
             this.lblDirector = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -71,7 +72,6 @@ namespace BTTH1
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panelContent = new System.Windows.Forms.Panel();
-            this.btnBack = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.pnlOrder.SuspendLayout();
             this.pnlWait.SuspendLayout();
@@ -111,6 +111,31 @@ namespace BTTH1
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1900, 1270);
             this.panel1.TabIndex = 0;
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.Transparent;
+            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(226)))), ((int)(((byte)(255)))));
+            this.btnBack.IconChar = FontAwesome.Sharp.IconChar.Backward;
+            this.btnBack.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(226)))), ((int)(((byte)(255)))));
+            this.btnBack.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBack.Location = new System.Drawing.Point(1702, 3);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(6);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Padding = new System.Windows.Forms.Padding(20, 0, 40, 0);
+            this.btnBack.Size = new System.Drawing.Size(281, 52);
+            this.btnBack.TabIndex = 37;
+            this.btnBack.TabStop = false;
+            this.btnBack.Text = "Quay lại";
+            this.btnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            this.btnBack.MouseEnter += new System.EventHandler(this.btnStaffMana_MouseEnter);
+            this.btnBack.MouseLeave += new System.EventHandler(this.btnStaffMana_MouseLeave);
             // 
             // pnlOrder
             // 
@@ -157,7 +182,7 @@ namespace BTTH1
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Consolas", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
-            this.label20.Location = new System.Drawing.Point(26, 300);
+            this.label20.Location = new System.Drawing.Point(26, 298);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(180, 32);
             this.label20.TabIndex = 34;
@@ -200,6 +225,17 @@ namespace BTTH1
             this.btnOrder.Click += new System.EventHandler(this.button1_Click);
             this.btnOrder.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button1_MouseDown);
             this.btnOrder.MouseUp += new System.Windows.Forms.MouseEventHandler(this.button1_MouseUp);
+            // 
+            // lblDateShow
+            // 
+            this.lblDateShow.AutoSize = true;
+            this.lblDateShow.Font = new System.Drawing.Font("Consolas", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateShow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(139)))), ((int)(((byte)(172)))));
+            this.lblDateShow.Location = new System.Drawing.Point(336, 9);
+            this.lblDateShow.Name = "lblDateShow";
+            this.lblDateShow.Size = new System.Drawing.Size(180, 32);
+            this.lblDateShow.TabIndex = 17;
+            this.lblDateShow.Text = "Ngày chiếu:";
             // 
             // label16
             // 
@@ -254,6 +290,17 @@ namespace BTTH1
             this.label15.TabIndex = 28;
             this.label15.Text = "Số lượng:";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Consolas", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.label8.Location = new System.Drawing.Point(26, 9);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(180, 32);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "Ngày chiếu:";
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -290,9 +337,9 @@ namespace BTTH1
             // panel3
             // 
             this.panel3.Controls.Add(this.lblDescription);
-            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Controls.Add(this.pnlTitleFilmName);
             this.panel3.Controls.Add(this.panel2);
-            this.panel3.Controls.Add(this.label9);
+            this.panel3.Controls.Add(this.lblTitleFilmName);
             this.panel3.Location = new System.Drawing.Point(0, 736);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1851, 491);
@@ -308,13 +355,13 @@ namespace BTTH1
             this.lblDescription.TabIndex = 22;
             this.lblDescription.Text = "Mô  tả";
             // 
-            // panel4
+            // pnlTitleFilmName
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(34)))), ((int)(((byte)(101)))));
-            this.panel4.Location = new System.Drawing.Point(0, 68);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(459, 2);
-            this.panel4.TabIndex = 21;
+            this.pnlTitleFilmName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(34)))), ((int)(((byte)(101)))));
+            this.pnlTitleFilmName.Location = new System.Drawing.Point(0, 68);
+            this.pnlTitleFilmName.Name = "pnlTitleFilmName";
+            this.pnlTitleFilmName.Size = new System.Drawing.Size(459, 2);
+            this.pnlTitleFilmName.TabIndex = 21;
             // 
             // panel2
             // 
@@ -324,27 +371,16 @@ namespace BTTH1
             this.panel2.Size = new System.Drawing.Size(1851, 2);
             this.panel2.TabIndex = 19;
             // 
-            // label9
+            // lblTitleFilmName
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Consolas", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(34)))), ((int)(((byte)(101)))));
-            this.label9.Location = new System.Drawing.Point(0, 10);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(478, 51);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "TRĂNG SÁNG MÙA ĐÔNG";
-            // 
-            // lblDateShow
-            // 
-            this.lblDateShow.AutoSize = true;
-            this.lblDateShow.Font = new System.Drawing.Font("Consolas", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateShow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(139)))), ((int)(((byte)(172)))));
-            this.lblDateShow.Location = new System.Drawing.Point(336, 9);
-            this.lblDateShow.Name = "lblDateShow";
-            this.lblDateShow.Size = new System.Drawing.Size(180, 32);
-            this.lblDateShow.TabIndex = 17;
-            this.lblDateShow.Text = "Ngày chiếu:";
+            this.lblTitleFilmName.AutoSize = true;
+            this.lblTitleFilmName.Font = new System.Drawing.Font("Consolas", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleFilmName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(34)))), ((int)(((byte)(101)))));
+            this.lblTitleFilmName.Location = new System.Drawing.Point(0, 10);
+            this.lblTitleFilmName.Name = "lblTitleFilmName";
+            this.lblTitleFilmName.Size = new System.Drawing.Size(478, 51);
+            this.lblTitleFilmName.TabIndex = 18;
+            this.lblTitleFilmName.Text = "TRĂNG SÁNG MÙA ĐÔNG";
             // 
             // lblLanguage
             // 
@@ -422,17 +458,6 @@ namespace BTTH1
             this.lblDirector.Size = new System.Drawing.Size(150, 32);
             this.lblDirector.TabIndex = 10;
             this.lblDirector.Text = "Đạo diễn:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Consolas", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
-            this.label8.Location = new System.Drawing.Point(26, 9);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(180, 32);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "Ngày chiếu:";
             // 
             // label7
             // 
@@ -561,30 +586,6 @@ namespace BTTH1
             this.panelContent.Size = new System.Drawing.Size(1928, 1300);
             this.panelContent.TabIndex = 36;
             // 
-            // btnBack
-            // 
-            this.btnBack.BackColor = System.Drawing.Color.Transparent;
-            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBack.FlatAppearance.BorderSize = 0;
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(226)))), ((int)(((byte)(255)))));
-            this.btnBack.IconChar = FontAwesome.Sharp.IconChar.Backward;
-            this.btnBack.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(226)))), ((int)(((byte)(255)))));
-            this.btnBack.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBack.Location = new System.Drawing.Point(1702, 3);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(6);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Padding = new System.Windows.Forms.Padding(20, 0, 40, 0);
-            this.btnBack.Size = new System.Drawing.Size(281, 52);
-            this.btnBack.TabIndex = 37;
-            this.btnBack.Text = "Quay lại";
-            this.btnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            this.btnBack.MouseEnter += new System.EventHandler(this.btnStaffMana_MouseEnter);
-            this.btnBack.MouseLeave += new System.EventHandler(this.btnStaffMana_MouseLeave);
-            // 
             // DetailFilmUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -630,11 +631,11 @@ namespace BTTH1
         private System.Windows.Forms.Label lblYear;
         private System.Windows.Forms.Label lblNational;
         private System.Windows.Forms.Label lblDirector;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblTitleFilmName;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblDescription;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel pnlTitleFilmName;
         private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;

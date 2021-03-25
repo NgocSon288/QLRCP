@@ -102,6 +102,24 @@
     <Compile Include="fMain.Designer.cs">
       <DependentUpon>fMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="fSeat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fSeat.Designer.cs">
+      <DependentUpon>fSeat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fUpdatePassword.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="fUpdatePassword.Designer.cs">
+      <DependentUpon>fUpdatePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fVerifyEmail_NewPassword.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="fVerifyEmail_NewPassword.Designer.cs">
+      <DependentUpon>fVerifyEmail_NewPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="HomeUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -164,6 +182,15 @@
     <EmbeddedResource Include="fMain.resx">
       <DependentUpon>fMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fSeat.resx">
+      <DependentUpon>fSeat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fUpdatePassword.resx">
+      <DependentUpon>fUpdatePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fVerifyEmail_NewPassword.resx">
+      <DependentUpon>fVerifyEmail_NewPassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HomeUC.resx">
       <DependentUpon>HomeUC.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,9 +224,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Assets\Images\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Template\neworder.html" />
+    <Content Include="Assets\Template\verifyemail_newpassword.html" />
     <Content Include="DB\CategoryFilm.txt" />
     <Content Include="DB\CategoryMember.txt" />
     <Content Include="DB\Film.txt" />

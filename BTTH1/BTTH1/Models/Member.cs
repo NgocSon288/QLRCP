@@ -9,44 +9,31 @@ namespace BTTH1.Models
     {
         public Guid ID { get; set; }
 
-        public Guid CategoryMemberID { get; set; }
+        public Guid CategoryMemberID { get; set; }// 3
 
-        public string Username { get; set; }
+        public string Username { get; set; }// 2
 
         public string Password { get; set; }
 
-        public string Name { get; set; }
+        public string Name { get; set; }// 1
 
-        public string Email { get; set; }
+        public string Email { get; set; }// 4
 
-        public string Address { get; set; }
+        public string Address { get; set; }// 6
 
-        public string PhoneNunmber { get; set; }
+        public string PhoneNunmber { get; set; }// 5
 
-        public DateTime BirthDay { get; set; }
+        public DateTime BirthDay { get; set; }// 7
 
-        public int Salary { get; set; }
+        public int Salary { get; set; }// 1 0
 
         public bool Status { get; set; }
+
+        public string Avatar { get; set; }
 
         public Member()
         {
             ID = Guid.NewGuid();
-        }
-
-        public Member(Guid categoryMemberID = default, string username = null, string password = null, string name = null, string email = null, string address = null, string phoneNunmber = null, DateTime birthDay = default)
-        {
-            ID = Guid.NewGuid();
-            CategoryMemberID = categoryMemberID;
-            Username = username;
-            Password = password;
-            Name = name;
-            Email = email;
-            Address = address;
-            PhoneNunmber = phoneNunmber;
-            BirthDay = birthDay;
-            Salary = 0;
-            Status = true;
         }
 
         /// <summary>
@@ -74,6 +61,22 @@ namespace BTTH1.Models
             {
                 return;
             }
+        }
+
+        public Member(Guid categoryMemberID, string username, string password, string name, string email, string address, string phoneNunmber, DateTime birthDay, string avatar, int salary = 0, bool status = true)
+        {
+            ID = Guid.NewGuid();
+            CategoryMemberID = categoryMemberID;
+            Username = username;
+            Password = password;
+            Name = name;
+            Email = email;
+            Address = address;
+            PhoneNunmber = phoneNunmber;
+            BirthDay = birthDay;
+            Salary = salary;
+            Status = status;
+            Avatar = avatar;
         }
 
         /// <summary>

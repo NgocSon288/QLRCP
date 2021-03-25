@@ -45,7 +45,7 @@ namespace BTTH1
             var btn = sender as Button;
             pageCurrent = Convert.ToInt32(btn.Tag.ToString());
 
-            FilterFilmByCondition(3, pageCurrent, category);
+            FilterFilmByCondition(3, pageCurrent, category, keyWord);
 
             // PageSelected đã được gán trong đây
             LoadActive(btn);
@@ -210,7 +210,7 @@ namespace BTTH1
             if (!string.IsNullOrEmpty(keyWord) && !string.IsNullOrWhiteSpace(keyWord))
             {
                 var keyConnvert = CompareStringHelper.Convert(keyWord.Trim()).ToUpper();
-                films = data.Where(f => CompareStringHelper.Convert(f.Name).ToUpper().Contains(keyConnvert));
+                films = films.Where(f => CompareStringHelper.Convert(f.Name).ToUpper().Contains(keyConnvert));
             }
 
             try

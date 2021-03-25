@@ -67,5 +67,25 @@ namespace BTTH1.Common
 
             return new Guid(value.ToString());
         }
+
+
+        public static Dictionary<string, bool> StringToDictionary(string seatString)
+        {
+            var seat = seatString.ToCharArray();
+            var result = new Dictionary<string, bool>();
+
+            for (int i = 0; i < seat.Length; i++)
+            {
+                result.Add((char)(65 + i / 10) + (i % 10 + 1).ToString(), seat[i] == '1');
+
+            }
+
+            return result;
+        }
+
+        public static string DictionaryToString(Dictionary<string, bool> seatDictionary)
+        {
+            return string.Join("", seatDictionary.Select(s => s.Value ? "1" : "0").ToList());
+        }
     }
 }

@@ -1,10 +1,12 @@
 ﻿using BTTH1.Common;
+using BTTH1.Models;
 using BTTH1.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,7 +22,7 @@ namespace BTTH1
         {
             InitializeComponent();
 
-            _memberService = new MemberService();
+            _memberService = new MemberService(); 
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -60,7 +62,8 @@ namespace BTTH1
         }
 
         private void Login()
-        {
+        { 
+
             if (!IsValidate())
             {
                 MessageBox.Show("Tài khoản hoặc mật khẩu không được để trống!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -73,6 +76,7 @@ namespace BTTH1
             var username = txtUsername.Text;
             var password = txtPassword.Text;
             var member = _memberService.GetByUsername(username);
+            var test = _memberService.GetAll();
 
             if (member == null)
             {
@@ -152,6 +156,6 @@ namespace BTTH1
             txtPassword.UseSystemPasswordChar = !txtPassword.UseSystemPasswordChar;
         }
 
-        #endregion 
+        #endregion
     }
 }

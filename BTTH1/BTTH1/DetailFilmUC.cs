@@ -24,6 +24,7 @@ namespace BTTH1
         private List<Room> rooms;
         private RoomFilm roomFilmSelected;
         private Room roomSelected;
+        private List<string> seatSelected;
 
         private PREVIOUS_FROM previousForm;
 
@@ -52,12 +53,33 @@ namespace BTTH1
                 return;
             }
 
+            var roomID = (cbpRoom.SelectedValue as Room).ID;
+            var filmID = film.ID;
+            seatSelected = new List<string>();
+            var seat = Converters<object>.StringToDictionary(_roomFilmService.GetByMultiID(roomID, filmID).Seat);
+
+
+            fSeat fSeat = new fSeat(seatSelected, seat, (int)numCount.Value);
+
+            Constants.MainForm.Hide();
+            fSeat.ShowDialog();
+            Constants.MainForm.Show();
+            // gọi form fSeat chọn ghế
+
+            if(seatSelected.Count <= 0)
+            {
+                return;
+            }
+
+            seatSelected.Sort();
+            roomFilmSelected.Seat = Converters<object>.DictionaryToString(seat);
+
             string mess = string.Format($"Bạn có muốn đặt {numCount.Value.ToString()} vé.\nMã phòng: {roomSelected.Name}.\nTổng tiền là: {lblTotalPrice.Text}");
             if (MessageBox.Show(mess, "Xác nhận đặt vé", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 await Order();
 
-                UIHelper.ShowControl(new DetailFilmUC(film), panelContent);
+                UIHelper.ShowControl(new DetailFilmUC(film, previousForm), panelContent);
             }
         }
 
@@ -108,6 +130,9 @@ namespace BTTH1
             lblPrice.Text = film.Price.ToString("#,##") + " VNĐ";
             lblDescription.Text = "\t" + film.Description;
 
+            lblTitleFilmName.Text = film.Name.ToUpper();
+            pnlTitleFilmName.Width = lblTitleFilmName.Width;
+
             LoadOrderInfo();
         }
 
@@ -150,8 +175,11 @@ namespace BTTH1
             roomSelected.SeatCount += (int)count;
             _roomService.Update(roomSelected);
 
+            // cập nhật ghế ngồi đã được chọn
+            _roomFilmService.Update(roomFilmSelected);
+
             // Tạo Order
-            var order = new Order(roomSelected.ID, film.ID, film.Name, category.Name, film.TimeLong, roomFilmSelected.DateShow, (int)count, film.Price);
+            var order = new Order(roomSelected.ID, film.ID, film.Name, category.Name, film.TimeLong, roomFilmSelected.DateShow, (int)count, film.Price, string.Join(", ", seatSelected));
             _orderService.Insert(order);
 
             // Gửi order qua mail
@@ -177,6 +205,7 @@ namespace BTTH1
             content = content.Replace("{{Count}}", order.Count.ToString());
             content = content.Replace("{{DateShow}}", order.DateShow.ToShortDateString());
             content = content.Replace("{{TotalPrice}}", (order.Count * order.Price).ToString("#,##") + " VNĐ");
+            content = content.Replace("{{Seat}}", string.Join(", ", seatSelected));
 
             await MailHelper.SendMail(Constants.CurrentMember.Email, "Đơn hàng mới từ CINEMA", content);
         }

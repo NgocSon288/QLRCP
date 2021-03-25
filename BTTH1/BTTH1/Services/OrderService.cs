@@ -3,6 +3,7 @@ using BTTH1.Repository;
 using BTTH1.Repository.Interface;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace BTTH1.Services
 {
@@ -13,6 +14,8 @@ namespace BTTH1.Services
         bool Insert(Order entity);
 
         List<Order> GetAll();
+
+        List<Order> GetAllByMemberID(Guid memberID);
 
         Order GetByID(Guid id);
 
@@ -45,6 +48,11 @@ namespace BTTH1.Services
         public List<Order> GetAll()
         {
             return _categoryMemberRepository.GetAll();
+        }
+
+        public List<Order> GetAllByMemberID(Guid memberID)
+        {
+            return _categoryMemberRepository.GetAll().Where(o => o.MemberID == memberID).ToList();
         }
 
         public Order GetByID(Guid id)

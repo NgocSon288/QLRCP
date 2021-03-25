@@ -34,6 +34,75 @@ Film
 
 
 
+----------------------------------
+
+- cập nhật db
+- cập nhật view header
+- thêm hình ảnh vào csdl
+- mới: cập nhật hình
+
+
+-----------------------
+
+Hóa đơn
+	+ nếu chưa có hóa đơn thì hiển thị không có hóa đơn0 nào
+
+Đổi mật khẩu -> verify email -> trang riêng
+
+ -------------------------
+
+sửa lại UI cập nhật mật khẩu		ok
+
+UI verify new password		ok
+
+---> Đổi mật khẩu thành công		ok
+
+thuật toán random		ok
+
+thứ tự tab
+
+-----------------------
+click vào mua ngay
+	+ tạo form ghế: số lượng ghế, phòng nào (Dictionary ghế, những ghế được chọn
+
+	+ yêu cầu chọn 5 ghế
+
+----------------------
+Nhấn vào ghế
+	+ tăng số ghế được chọn, nếu số ghế max thì không cho chọn nữa		xong
+
+	+ trường hợp nhấn nút đặt mua, trường hợp nhấn nút X thoát
+	+ gửi mail số ghế
+
+
+
+
+_________________________
+Lỗi khi chọn hình ảnh,  ảnh đã được thay đổi trong member.Avatar (119), nhưng không bấm cập nhật
+- khi bấm cập nhật mật khẩu vô tình cập nhật lại avatar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
