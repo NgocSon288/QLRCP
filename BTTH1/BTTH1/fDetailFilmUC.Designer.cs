@@ -1,7 +1,7 @@
 ﻿
 namespace BTTH1
 {
-    partial class DetailFilmUC
+    partial class fDetailFilmUC
     {
         /// <summary> 
         /// Required designer variable.
@@ -206,7 +206,7 @@ namespace BTTH1
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(557, 37);
             this.label18.TabIndex = 36;
-            this.label18.Text = "vui lòng đợi trong giây lác...";
+            this.label18.Text = "vui lòng đợi trong giây lát...";
             // 
             // btnOrder
             // 

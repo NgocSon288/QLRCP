@@ -19,13 +19,19 @@ namespace BTTH1.Services
 
         RoomFilm GetByMultiID(Guid roomID, Guid filmID);
 
+        List<RoomFilm> GetAllByFilmID(Guid filmID);
+
         List<RoomFilm> GetByFilmID(Guid filmID);
+
+        List<RoomFilm> GetByRoomID(Guid roomID);
 
         bool DeleteAll();
 
         bool DeleteByID(Guid id);
 
         bool Update(RoomFilm entity);
+
+        bool UpdateRange(List<RoomFilm> entities);
     }
 
     public class RoomFilmService : IRoomFilmService
@@ -57,6 +63,11 @@ namespace BTTH1.Services
             return GetAll().Where(rf => rf.DateShow >= DateTime.Now && rf.FilmID == filmID && rf.Status).ToList();
         }
 
+        public List<RoomFilm> GetAllByFilmID(Guid filmID)
+        {
+            return GetAll().Where(rf => rf.FilmID == filmID && rf.Status).ToList();
+        }
+
         public RoomFilm GetByID(Guid id)
         {
             return _categoryMemberRepository.GetByID(id);
@@ -80,6 +91,24 @@ namespace BTTH1.Services
         public bool Update(RoomFilm entity)
         {
             return _categoryMemberRepository.Update(entity);
+        }
+
+        public bool UpdateRange(List<RoomFilm> entities)
+        {
+            try
+            {
+                entities.ForEach(rf => Update(rf));
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public List<RoomFilm> GetByRoomID(Guid roomID)
+        {
+            return GetAll().Where(rf => rf.DateShow >= DateTime.Now && rf.RoomID == roomID && rf.Status).ToList();
         }
     }
 }

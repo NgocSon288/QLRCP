@@ -44,7 +44,7 @@ namespace BTTH1
             ActivateButton(sender);
 
             // Show user control tương ứng
-            var fHome = new HomeUC();
+            var fHome = new fHomeUC();
             UIHelper.ShowControl(fHome, panelContent);
         }
 
@@ -54,7 +54,7 @@ namespace BTTH1
 
             ActivateButton(sender);
 
-            var fFilm = new FilmUC();
+            var fFilm = new fFilmUC();
             UIHelper.ShowControl(fFilm, panelContent);
         }
 
@@ -64,7 +64,7 @@ namespace BTTH1
 
             ActivateButton(sender);
 
-            var fMember = new MemberUC();
+            var fMember = new fMemberUC();
             UIHelper.ShowControl(fMember, panelContent);
         }
 
@@ -73,6 +73,9 @@ namespace BTTH1
             isHeighPermission = true;
 
             ActivateButton(sender);
+
+            var filmManagement = new fFilmManagement();
+            UIHelper.ShowControl(filmManagement, panelContent);
         }
 
         private void btn5_Click(object sender, System.EventArgs e)
@@ -80,6 +83,9 @@ namespace BTTH1
             isHeighPermission = true;
 
             ActivateButton(sender);
+
+            var fRoomManagement = new fRoomManagement();
+            UIHelper.ShowControl(fRoomManagement, panelContent);
         }
 
         private void pictureBox1_Click(object sender, System.EventArgs e)
@@ -179,7 +185,7 @@ namespace BTTH1
             leftBorderBtn.Visible = false;
 
             // Show user control tương ứng
-            var fHome = new HomeUC();
+            var fHome = new fHomeUC();
             UIHelper.ShowControl(fHome, panelContent);
         }
 

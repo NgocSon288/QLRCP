@@ -1,7 +1,7 @@
 ﻿
 namespace BTTH1
 {
-    partial class FilmUC
+    partial class fFilmUC
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace BTTH1
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FilmUC));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fFilmUC));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlWrapFilm3 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -48,13 +48,13 @@ namespace BTTH1
             this.lblName1 = new System.Windows.Forms.Label();
             this.flpPagination = new System.Windows.Forms.FlowLayoutPanel();
             this.panelContent = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblCount = new System.Windows.Forms.Label();
             this.flpCategory = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtKeyWord = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblCount = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.pnlWrapFilm3.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -284,6 +284,28 @@ namespace BTTH1
             this.panelContent.Size = new System.Drawing.Size(1928, 1300);
             this.panelContent.TabIndex = 4;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Myriad Hebrew", 12F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(130)))), ((int)(((byte)(49)))));
+            this.label1.Location = new System.Drawing.Point(41, 44);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(201, 39);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Thể loại phim";
+            // 
+            // lblCount
+            // 
+            this.lblCount.AutoSize = true;
+            this.lblCount.Font = new System.Drawing.Font("Myriad Hebrew", 12F);
+            this.lblCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(130)))), ((int)(((byte)(49)))));
+            this.lblCount.Location = new System.Drawing.Point(42, 338);
+            this.lblCount.Name = "lblCount";
+            this.lblCount.Size = new System.Drawing.Size(98, 39);
+            this.lblCount.TabIndex = 9;
+            this.lblCount.Text = "label1";
+            // 
             // flpCategory
             // 
             this.flpCategory.Location = new System.Drawing.Point(37, 136);
@@ -336,28 +358,6 @@ namespace BTTH1
             this.pictureBox1.Size = new System.Drawing.Size(618, 86);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            // 
-            // lblCount
-            // 
-            this.lblCount.AutoSize = true;
-            this.lblCount.Font = new System.Drawing.Font("Myriad Hebrew", 12F);
-            this.lblCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(130)))), ((int)(((byte)(49)))));
-            this.lblCount.Location = new System.Drawing.Point(42, 338);
-            this.lblCount.Name = "lblCount";
-            this.lblCount.Size = new System.Drawing.Size(98, 39);
-            this.lblCount.TabIndex = 9;
-            this.lblCount.Text = "label1";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Myriad Hebrew", 12F);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(130)))), ((int)(((byte)(49)))));
-            this.label1.Location = new System.Drawing.Point(41, 44);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(201, 39);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Thể loại phim";
             // 
             // FilmUC
             // 

@@ -34,28 +34,28 @@ namespace BTTH1
             this.lblSeatSelected = new System.Windows.Forms.Label();
             this.lblSeatCount = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pnlSelected = new System.Windows.Forms.Panel();
+            this.pnlTitleFilmName = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.btnOrder = new System.Windows.Forms.Button();
             this.flpSeat = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblName = new System.Windows.Forms.Label();
-            this.pnlTitleFilmName = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.pnlSelected = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.panel8.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -129,6 +129,112 @@ namespace BTTH1
             this.panel2.Size = new System.Drawing.Size(1700, 1246);
             this.panel2.TabIndex = 3;
             // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.label3);
+            this.panel8.Controls.Add(this.panel9);
+            this.panel8.Location = new System.Drawing.Point(941, 1028);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(343, 60);
+            this.panel8.TabIndex = 36;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            this.label3.Location = new System.Drawing.Point(90, 13);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(215, 37);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Đã được mua";
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel9.Location = new System.Drawing.Point(0, 0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(60, 60);
+            this.panel9.TabIndex = 0;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.label2);
+            this.panel6.Controls.Add(this.panel7);
+            this.panel6.Location = new System.Drawing.Point(491, 1028);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(299, 60);
+            this.panel6.TabIndex = 36;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(90, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(107, 37);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Trống";
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.White;
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(60, 60);
+            this.panel7.TabIndex = 0;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.label1);
+            this.panel5.Controls.Add(this.pnlSelected);
+            this.panel5.Location = new System.Drawing.Point(41, 1028);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(299, 60);
+            this.panel5.TabIndex = 35;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(20)))), ((int)(((byte)(205)))));
+            this.label1.Location = new System.Drawing.Point(90, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(143, 37);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Đã chọn";
+            // 
+            // pnlSelected
+            // 
+            this.pnlSelected.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(20)))), ((int)(((byte)(205)))));
+            this.pnlSelected.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlSelected.Location = new System.Drawing.Point(0, 0);
+            this.pnlSelected.Name = "pnlSelected";
+            this.pnlSelected.Size = new System.Drawing.Size(60, 60);
+            this.pnlSelected.TabIndex = 0;
+            // 
+            // pnlTitleFilmName
+            // 
+            this.pnlTitleFilmName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(34)))), ((int)(((byte)(101)))));
+            this.pnlTitleFilmName.Location = new System.Drawing.Point(0, 1003);
+            this.pnlTitleFilmName.Name = "pnlTitleFilmName";
+            this.pnlTitleFilmName.Size = new System.Drawing.Size(592, 2);
+            this.pnlTitleFilmName.TabIndex = 34;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Silver;
+            this.panel4.Location = new System.Drawing.Point(0, 1003);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1700, 2);
+            this.panel4.TabIndex = 33;
+            // 
             // button2
             // 
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -168,7 +274,7 @@ namespace BTTH1
             this.flpSeat.AutoScroll = true;
             this.flpSeat.Location = new System.Drawing.Point(20, 149);
             this.flpSeat.Name = "flpSeat";
-            this.flpSeat.Size = new System.Drawing.Size(1654, 855);
+            this.flpSeat.Size = new System.Drawing.Size(1650, 855);
             this.flpSeat.TabIndex = 1;
             // 
             // panel3
@@ -177,7 +283,7 @@ namespace BTTH1
             this.panel3.Controls.Add(this.lblName);
             this.panel3.Location = new System.Drawing.Point(20, 28);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1654, 77);
+            this.panel3.Size = new System.Drawing.Size(1600, 77);
             this.panel3.TabIndex = 0;
             // 
             // lblName
@@ -190,112 +296,6 @@ namespace BTTH1
             this.lblName.Size = new System.Drawing.Size(214, 51);
             this.lblName.TabIndex = 2;
             this.lblName.Text = "Màn hình";
-            // 
-            // pnlTitleFilmName
-            // 
-            this.pnlTitleFilmName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(34)))), ((int)(((byte)(101)))));
-            this.pnlTitleFilmName.Location = new System.Drawing.Point(0, 1003);
-            this.pnlTitleFilmName.Name = "pnlTitleFilmName";
-            this.pnlTitleFilmName.Size = new System.Drawing.Size(592, 2);
-            this.pnlTitleFilmName.TabIndex = 34;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Silver;
-            this.panel4.Location = new System.Drawing.Point(0, 1003);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1700, 2);
-            this.panel4.TabIndex = 33;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.label1);
-            this.panel5.Controls.Add(this.pnlSelected);
-            this.panel5.Location = new System.Drawing.Point(41, 1028);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(299, 60);
-            this.panel5.TabIndex = 35;
-            // 
-            // pnlSelected
-            // 
-            this.pnlSelected.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(20)))), ((int)(((byte)(205)))));
-            this.pnlSelected.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlSelected.Location = new System.Drawing.Point(0, 0);
-            this.pnlSelected.Name = "pnlSelected";
-            this.pnlSelected.Size = new System.Drawing.Size(60, 60);
-            this.pnlSelected.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(20)))), ((int)(((byte)(205)))));
-            this.label1.Location = new System.Drawing.Point(90, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 37);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Đã chọn";
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.label2);
-            this.panel6.Controls.Add(this.panel7);
-            this.panel6.Location = new System.Drawing.Point(491, 1028);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(299, 60);
-            this.panel6.TabIndex = 36;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(175)))), ((int)(((byte)(192)))));
-            this.label2.Location = new System.Drawing.Point(90, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 37);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Trống";
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(175)))), ((int)(((byte)(192)))));
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(60, 60);
-            this.panel7.TabIndex = 0;
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.label3);
-            this.panel8.Controls.Add(this.panel9);
-            this.panel8.Location = new System.Drawing.Point(941, 1028);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(343, 60);
-            this.panel8.TabIndex = 36;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(249)))), ((int)(((byte)(251)))));
-            this.label3.Location = new System.Drawing.Point(90, 13);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(215, 37);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Đã được mua";
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(249)))), ((int)(((byte)(251)))));
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel9.Location = new System.Drawing.Point(0, 0);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(60, 60);
-            this.panel9.TabIndex = 0;
             // 
             // fSeat
             // 
@@ -312,14 +312,14 @@ namespace BTTH1
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }

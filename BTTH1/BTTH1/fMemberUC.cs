@@ -15,7 +15,7 @@ using System.Windows.Forms;
 
 namespace BTTH1
 {
-    public partial class MemberUC : UserControl
+    public partial class fMemberUC : UserControl
     {
         private readonly IMemberService _memberService;
         private readonly ICategoryMemberService _categoryMemberService;
@@ -31,7 +31,7 @@ namespace BTTH1
         private string avatarTemp = "";
 
 
-        public MemberUC()
+        public fMemberUC()
         {
             InitializeComponent();
 
@@ -98,6 +98,8 @@ namespace BTTH1
         private void btnCancelUpdate_Click(object sender, EventArgs e)
         {
             ChangeVisible(false);
+
+            ptbAvatar.BackgroundImage = new Bitmap("../../Assets/Images/" + member.Avatar);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -344,6 +346,8 @@ namespace BTTH1
 
                 if (isChaned)
                     LoadMemberView();
+
+                
             }
             else
             {
@@ -449,16 +453,8 @@ namespace BTTH1
 
         private void txtAddress_Enter(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtAddress.Text))
-            {
-                txtPhone.ForeColor = Constants.LEAVE_TEXTBOX_INVALID_VALUE_MEMBER_DETAIL;
-                pnlPhone.BackColor = Constants.LEAVE_PANELINVALID_VALUE_MEMBER_DETAIL;
-            }
-            else
-            {
-                txtAddress.ForeColor = Constants.ACTIVE_TEXTBOX_MEMBER_DETAIL;
-                pnlAddress.BackColor = Constants.ACTIVE_PANEL_MEMBER_DETAIL;
-            }
+            txtAddress.ForeColor = Constants.ACTIVE_TEXTBOX_MEMBER_DETAIL;
+            pnlAddress.BackColor = Constants.ACTIVE_PANEL_MEMBER_DETAIL;
         }
 
         private void txtAddress_Leave(object sender, EventArgs e)

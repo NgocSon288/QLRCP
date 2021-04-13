@@ -12,12 +12,13 @@ using System.Windows.Forms;
 
 namespace BTTH1
 {
-    public partial class DetailFilmUC : UserControl
+    public partial class fDetailFilmUC : UserControl
     {
         private readonly ICategoryFilmService _categoryFilmService;
         private readonly IRoomFilmService _roomFilmService;
         private readonly IRoomService _roomService;
         private readonly IOrderService _orderService;
+        private readonly IFilmService _filmService;
 
         private Film film;
         private List<RoomFilm> roomFilms;
@@ -28,7 +29,7 @@ namespace BTTH1
 
         private PREVIOUS_FROM previousForm;
 
-        public DetailFilmUC(Film film, PREVIOUS_FROM pre = PREVIOUS_FROM.DETAIL)
+        public fDetailFilmUC(Film film, PREVIOUS_FROM pre = PREVIOUS_FROM.DETAIL)
         {
             InitializeComponent();
 
@@ -36,6 +37,7 @@ namespace BTTH1
             _roomFilmService = new RoomFilmService();
             _roomService = new RoomService();
             _orderService = new OrderService();
+            _filmService = new FilmService();
 
             this.film = film;
             this.previousForm = pre;
@@ -79,7 +81,7 @@ namespace BTTH1
             {
                 await Order();
 
-                UIHelper.ShowControl(new DetailFilmUC(film, previousForm), panelContent);
+                UIHelper.ShowControl(new fDetailFilmUC(film, previousForm), panelContent);
             }
         }
 
@@ -96,13 +98,13 @@ namespace BTTH1
             switch (previousForm)
             {
                 case PREVIOUS_FROM.HOME:
-                    UIHelper.ShowControl(new HomeUC(), panelContent);
+                    UIHelper.ShowControl(new fHomeUC(), panelContent);
                     break;
                 case PREVIOUS_FROM.FILM:
-                    UIHelper.ShowControl(new FilmUC(), panelContent);
+                    UIHelper.ShowControl(new fFilmUC(), panelContent);
                     break;
                 default:
-                    UIHelper.ShowControl(new DetailFilmUC(film), panelContent);
+                    UIHelper.ShowControl(new fDetailFilmUC(film), panelContent);
                     break;
             }
         }
@@ -181,6 +183,10 @@ namespace BTTH1
             // Tạo Order
             var order = new Order(roomSelected.ID, film.ID, film.Name, category.Name, film.TimeLong, roomFilmSelected.DateShow, (int)count, film.Price, string.Join(", ", seatSelected));
             _orderService.Insert(order);
+
+            // tăng số lượng mua của film
+            film.OrderCount += order.Count;
+            _filmService.Update(film);
 
             // Gửi order qua mail
             await SendMail(order);

@@ -1,7 +1,7 @@
 ﻿
 namespace BTTH1
 {
-    partial class HomeUC
+    partial class fHomeUC
     {
         /// <summary> 
         /// Required designer variable.

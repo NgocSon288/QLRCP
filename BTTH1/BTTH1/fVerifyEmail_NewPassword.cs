@@ -44,7 +44,7 @@ namespace BTTH1
 
                 MessageBox.Show("Đổi mật khẩu thành công");
 
-                UIHelper.ShowControl(new MemberUC(), Constants.Root);
+                UIHelper.ShowControl(new fMemberUC(), Constants.Root);
             }
             else
             {

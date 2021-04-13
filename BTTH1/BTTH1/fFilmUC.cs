@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace BTTH1
 {
-    public partial class FilmUC : UserControl
+    public partial class fFilmUC : UserControl
     {
         private readonly IFilmService _filmService;
         private readonly IRoomFilmService _roomFilmService;
@@ -24,10 +24,10 @@ namespace BTTH1
         // Biến điều kiện
         private int pageCurrent = 1;
 
-        private List<Guid> category = new List<Guid>();
+        private List<Guid> categoryListActive = new List<Guid>();
         private string keyWord = "";
 
-        public FilmUC()
+        public fFilmUC()
         {
             InitializeComponent();
 
@@ -45,7 +45,7 @@ namespace BTTH1
             var btn = sender as Button;
             pageCurrent = Convert.ToInt32(btn.Tag.ToString());
 
-            FilterFilmByCondition(3, pageCurrent, category, keyWord);
+            FilterFilmByCondition(3, pageCurrent, categoryListActive, keyWord);
 
             // PageSelected đã được gán trong đây
             LoadActive(btn);
@@ -55,7 +55,7 @@ namespace BTTH1
         {
             keyWord = txtKeyWord.Text;
 
-            FilterFilmByCondition(3, 1, category, keyWord);
+            FilterFilmByCondition(3, 1, categoryListActive, keyWord);
 
             LoadPagination();
         }
@@ -66,7 +66,7 @@ namespace BTTH1
             {
                 keyWord = txtKeyWord.Text;
 
-                FilterFilmByCondition(3, 1, category, keyWord);
+                FilterFilmByCondition(3, 1, categoryListActive, keyWord);
 
                 LoadPagination();
             }
@@ -79,18 +79,18 @@ namespace BTTH1
 
             if (btn.ForeColor == Constants.ACTIVE_CATEGORY_BUTTON_BG_COLOR)
             {
-                category.Add(cateID);
+                categoryListActive.Add(cateID);
                 btn.ForeColor = Constants.LEAVE_CATEGORY_BUTTON_BG_COLOR;
                 btn.BackColor = Constants.ACTIVE_CATEGORY_BUTTON_BG_COLOR;
             }
             else
             {
-                category.RemoveAt(category.IndexOf(cateID));
+                categoryListActive.RemoveAt(categoryListActive.IndexOf(cateID));
                 btn.ForeColor = Constants.ACTIVE_CATEGORY_BUTTON_BG_COLOR;
                 btn.BackColor = Constants.LEAVE_CATEGORY_BUTTON_BG_COLOR;
             }
 
-            FilterFilmByCondition(3, 1, category, keyWord);
+            FilterFilmByCondition(3, 1, categoryListActive, keyWord);
 
             LoadPagination();
         }
@@ -102,7 +102,7 @@ namespace BTTH1
 
             var film = ptb != null ? ptb.Tag as Film : lbl.Tag as Film;
 
-            UIHelper.ShowControl(new DetailFilmUC(film, PREVIOUS_FROM.FILM), panelContent);
+            UIHelper.ShowControl(new fDetailFilmUC(film, PREVIOUS_FROM.FILM), panelContent);
         }
 
         #endregion Events
@@ -140,6 +140,8 @@ namespace BTTH1
                     Margin = new Padding(40, 5, 80, 5)
                 };
 
+                btn.FlatAppearance.BorderSize = 2;
+                btn.FlatAppearance.BorderColor = Constants.ACTIVE_CATEGORY_BUTTON_BG_COLOR;
                 btn.Click += Btn_Click1;
                 btn.Tag = item.ID;
                 btn.Font = new Font(btn.Font.FontFamily, Constants.FONTSIZE_CATEGORY_BUTTON);
@@ -302,7 +304,7 @@ namespace BTTH1
 
         private void lblName1_Click(object sender, EventArgs e)
         {
-            UIHelper.ShowControl(new DetailFilmUC((sender as PictureBox)?.Tag as Film), panelContent);
+            UIHelper.ShowControl(new fDetailFilmUC((sender as PictureBox)?.Tag as Film), panelContent);
         }
 
         #endregion UI

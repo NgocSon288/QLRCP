@@ -7,12 +7,12 @@ using System.Windows.Forms;
 
 namespace BTTH1
 {
-    public partial class HomeUC : UserControl
+    public partial class fHomeUC : UserControl
     {
         private readonly IFilmService _filmService;
         private readonly IRoomFilmService _roomFilmService;
 
-        public HomeUC()
+        public fHomeUC()
         {
             InitializeComponent();
 
@@ -87,7 +87,7 @@ namespace BTTH1
 
             var film = ptb != null ? ptb.Tag as Film : lbl.Tag as Film;
 
-            UIHelper.ShowControl(new DetailFilmUC(film, PREVIOUS_FROM.HOME), panelContent);
+            UIHelper.ShowControl(new fDetailFilmUC(film, PREVIOUS_FROM.HOME), panelContent);
         }
 
         #endregion UI

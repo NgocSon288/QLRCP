@@ -90,7 +90,7 @@ namespace BTTH1.Models
             CreatedDate = DateTime.Now;
             CreatedBy = Constants.CurrentMember.ID;
             DeletedDate = DateTime.Now;
-            DeletedBy = new Guid();
+            DeletedBy = Constants.CurrentMember.ID;
             Status = true;
         }
     }

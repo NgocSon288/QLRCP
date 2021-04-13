@@ -78,17 +78,23 @@
     <Compile Include="Common\MailHelper.cs" />
     <Compile Include="Common\UIHelper.cs" />
     <Compile Include="Data\FileHelper.cs" />
-    <Compile Include="DetailFilmUC.cs">
+    <Compile Include="fDetailFilmUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DetailFilmUC.Designer.cs">
-      <DependentUpon>DetailFilmUC.cs</DependentUpon>
+    <Compile Include="fDetailFilmUC.Designer.cs">
+      <DependentUpon>fDetailFilmUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="FilmUC.cs">
+    <Compile Include="fFilmManagement.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="FilmUC.Designer.cs">
-      <DependentUpon>FilmUC.cs</DependentUpon>
+    <Compile Include="fFilmManagement.Designer.cs">
+      <DependentUpon>fFilmManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fFilmUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="fFilmUC.Designer.cs">
+      <DependentUpon>fFilmUC.cs</DependentUpon>
     </Compile>
     <Compile Include="fLogin.cs">
       <SubType>Form</SubType>
@@ -102,11 +108,29 @@
     <Compile Include="fMain.Designer.cs">
       <DependentUpon>fMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="fModifiedFilm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="fModifiedFilm.Designer.cs">
+      <DependentUpon>fModifiedFilm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fRoomManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="fRoomManagement.Designer.cs">
+      <DependentUpon>fRoomManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="fSeat.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fSeat.Designer.cs">
       <DependentUpon>fSeat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fSeatCount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fSeatCount.Designer.cs">
+      <DependentUpon>fSeatCount.cs</DependentUpon>
     </Compile>
     <Compile Include="fUpdatePassword.cs">
       <SubType>UserControl</SubType>
@@ -120,17 +144,17 @@
     <Compile Include="fVerifyEmail_NewPassword.Designer.cs">
       <DependentUpon>fVerifyEmail_NewPassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="HomeUC.cs">
+    <Compile Include="fHomeUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="HomeUC.Designer.cs">
-      <DependentUpon>HomeUC.cs</DependentUpon>
+    <Compile Include="fHomeUC.Designer.cs">
+      <DependentUpon>fHomeUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="MemberUC.cs">
+    <Compile Include="fMemberUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MemberUC.Designer.cs">
-      <DependentUpon>MemberUC.cs</DependentUpon>
+    <Compile Include="fMemberUC.Designer.cs">
+      <DependentUpon>fMemberUC.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\CategoryFilm.cs" />
     <Compile Include="Models\CategoryMember.cs" />
@@ -141,12 +165,6 @@
     <Compile Include="Models\RoomFilm.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RegisMemberUC.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="RegisMemberUC.Designer.cs">
-      <DependentUpon>RegisMemberUC.cs</DependentUpon>
-    </Compile>
     <Compile Include="Repository\CategoryLilmRepository.cs" />
     <Compile Include="Repository\CategoryMemberRepository.cs" />
     <Compile Include="Repository\FilmRepository.cs" />
@@ -170,11 +188,14 @@
     <Compile Include="Services\OrderService.cs" />
     <Compile Include="Services\RoomFilmService.cs" />
     <Compile Include="Services\RoomService.cs" />
-    <EmbeddedResource Include="DetailFilmUC.resx">
-      <DependentUpon>DetailFilmUC.cs</DependentUpon>
+    <EmbeddedResource Include="fDetailFilmUC.resx">
+      <DependentUpon>fDetailFilmUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FilmUC.resx">
-      <DependentUpon>FilmUC.cs</DependentUpon>
+    <EmbeddedResource Include="fFilmManagement.resx">
+      <DependentUpon>fFilmManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fFilmUC.resx">
+      <DependentUpon>fFilmUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
@@ -182,8 +203,17 @@
     <EmbeddedResource Include="fMain.resx">
       <DependentUpon>fMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fModifiedFilm.resx">
+      <DependentUpon>fModifiedFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fRoomManagement.resx">
+      <DependentUpon>fRoomManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fSeat.resx">
       <DependentUpon>fSeat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fSeatCount.resx">
+      <DependentUpon>fSeatCount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fUpdatePassword.resx">
       <DependentUpon>fUpdatePassword.cs</DependentUpon>
@@ -191,11 +221,11 @@
     <EmbeddedResource Include="fVerifyEmail_NewPassword.resx">
       <DependentUpon>fVerifyEmail_NewPassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HomeUC.resx">
-      <DependentUpon>HomeUC.cs</DependentUpon>
+    <EmbeddedResource Include="fHomeUC.resx">
+      <DependentUpon>fHomeUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MemberUC.resx">
-      <DependentUpon>MemberUC.cs</DependentUpon>
+    <EmbeddedResource Include="fMemberUC.resx">
+      <DependentUpon>fMemberUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -207,9 +237,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="RegisMemberUC.resx">
-      <DependentUpon>RegisMemberUC.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -224,10 +251,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Assets\Images\" />
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include="Assets\Images\admin1.jpg" />
+    <Content Include="Assets\Images\admin2.jpg" />
+    <Content Include="Assets\Images\admin4.jpg" />
+    <Content Include="Assets\Images\adminempty-cart.jpg" />
+    <Content Include="Assets\Images\adminsearch.jpg" />
+    <Content Include="Assets\Images\customer2.jpg" />
+    <Content Include="Assets\Images\staff3.jpg" />
+    <Content Include="Assets\Images\staff4.jpg" />
     <Content Include="Assets\Template\neworder.html" />
     <Content Include="Assets\Template\verifyemail_newpassword.html" />
     <Content Include="DB\CategoryFilm.txt" />
@@ -237,6 +270,17 @@
     <Content Include="DB\Order.txt" />
     <Content Include="DB\Room.txt" />
     <Content Include="DB\RoomFilm.txt" />
+    <Content Include="Resources\chair-icon-1.png" />
+    <Content Include="Resources\chair-icon-2.png" />
+    <Content Include="Resources\chair-icon-3.png" />
+    <Content Include="Resources\chair-icon-4.png" />
+    <Content Include="Resources\cinema-1.png" />
+    <Content Include="Resources\cinema-icon.png" />
+    <Content Include="Resources\emoji.jpg" />
+    <Content Include="Resources\film11.jpg" />
+    <Content Include="Resources\film12.jpg" />
+    <Content Include="Resources\film13.jpg" />
+    <Content Include="Resources\film14.jpg" />
     <None Include="Resources\bg-image.png" />
     <None Include="Resources\emoji.png" />
     <None Include="Resources\trailer1.jfif" />

@@ -7,37 +7,42 @@ namespace BTTH1.Models
 {
     public class Film
     {
-        public Guid ID { get; set; }
+        public Guid ID { get; set; }                
 
-        public Guid CategoryFilmID { get; set; }
+        public Guid CategoryFilmID { get; set; }    //
+            
+        public string Name { get; set; }        //
 
-        public string Name { get; set; }
+        public string Image { get; set; }       //
 
-        public string Image { get; set; }
+        public decimal Price { get; set; }      //
 
-        public decimal Price { get; set; }
+        public string Description { get; set; }     //
+            
+        public string Director { get; set; }        //
 
-        public string Description { get; set; }
+        public string National { get; set; }    //
 
-        public string Director { get; set; }
+        public string Language { get; set; }        //
 
-        public string National { get; set; }
+        public int OrderCount { get; set; }     
 
-        public string Language { get; set; }
+        public int TimeLong { get; set; }           //
 
-        public int OrderCount { get; set; }
+        public int Rating { get; set; } 
 
-        public int TimeLong { get; set; }
+        public string Actor { get; set; }       //
 
-        public int Rating { get; set; }
+        public int CreatedYear { get; set; }    //
 
-        public string Actor { get; set; }
-
-        public int CreatedYear { get; set; }
+        public bool Status { get; set; }
 
         public Film()
         {
             ID = Guid.NewGuid();
+            OrderCount = 0;
+            Rating = 0;
+            Status = true;
         }
 
         public Film(List<object> objValues)
@@ -79,6 +84,7 @@ namespace BTTH1.Models
             Rating = 0;
             Actor = actor;
             CreatedYear = createdYear;
+            Status = true;
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace BTTH1
 {
-    partial class MemberUC
+    partial class fMemberUC
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,37 +29,24 @@ namespace BTTH1
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MemberUC));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fMemberUC));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.pnlEdit = new System.Windows.Forms.Panel();
+            this.btnCancelUpdate = new System.Windows.Forms.Button();
             this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
             this.pnlPassword = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.textBox8 = new System.Windows.Forms.TextBox();
             this.pnlEmail = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.pnlCategoryMember = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.pnlName = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.pnlUsername = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtCategoryMember = new System.Windows.Forms.TextBox();
             this.pnlAddress = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.pnlPhone = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -92,17 +79,9 @@ namespace BTTH1
             this.panel11 = new System.Windows.Forms.Panel();
             this.lblTitleName = new System.Windows.Forms.Label();
             this.ptbAvatar = new System.Windows.Forms.PictureBox();
-            this.btnCancelUpdate = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel9.SuspendLayout();
             this.pnlEdit.SuspendLayout();
-            this.pnlPassword.SuspendLayout();
-            this.pnlEmail.SuspendLayout();
-            this.pnlCategoryMember.SuspendLayout();
-            this.pnlName.SuspendLayout();
-            this.pnlUsername.SuspendLayout();
-            this.pnlAddress.SuspendLayout();
-            this.pnlPhone.SuspendLayout();
             this.pnlView.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnlEmptyOrders.SuspendLayout();
@@ -164,6 +143,22 @@ namespace BTTH1
             this.pnlEdit.Size = new System.Drawing.Size(928, 597);
             this.pnlEdit.TabIndex = 27;
             // 
+            // btnCancelUpdate
+            // 
+            this.btnCancelUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelUpdate.FlatAppearance.BorderSize = 2;
+            this.btnCancelUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelUpdate.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
+            this.btnCancelUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(34)))), ((int)(((byte)(101)))));
+            this.btnCancelUpdate.Location = new System.Drawing.Point(608, 12);
+            this.btnCancelUpdate.Name = "btnCancelUpdate";
+            this.btnCancelUpdate.Size = new System.Drawing.Size(111, 51);
+            this.btnCancelUpdate.TabIndex = 35;
+            this.btnCancelUpdate.TabStop = false;
+            this.btnCancelUpdate.Text = "HỦY";
+            this.btnCancelUpdate.UseVisualStyleBackColor = true;
+            this.btnCancelUpdate.Click += new System.EventHandler(this.btnCancelUpdate_Click);
+            // 
             // dtpBirthday
             // 
             this.dtpBirthday.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(139)))), ((int)(((byte)(172)))));
@@ -180,126 +175,38 @@ namespace BTTH1
             // pnlPassword
             // 
             this.pnlPassword.BackColor = System.Drawing.Color.Silver;
-            this.pnlPassword.Controls.Add(this.panel10);
-            this.pnlPassword.Controls.Add(this.textBox8);
             this.pnlPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(139)))), ((int)(((byte)(172)))));
             this.pnlPassword.Location = new System.Drawing.Point(19, 204);
             this.pnlPassword.Name = "pnlPassword";
             this.pnlPassword.Size = new System.Drawing.Size(464, 3);
             this.pnlPassword.TabIndex = 34;
             // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel10.Location = new System.Drawing.Point(0, 0);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(464, 2);
-            this.panel10.TabIndex = 28;
-            // 
-            // textBox8
-            // 
-            this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox8.Font = new System.Drawing.Font("Calibri", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.ForeColor = System.Drawing.Color.Black;
-            this.textBox8.Location = new System.Drawing.Point(0, -41);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(400, 85);
-            this.textBox8.TabIndex = 29;
-            this.textBox8.Text = "tên";
-            // 
             // pnlEmail
             // 
             this.pnlEmail.BackColor = System.Drawing.Color.Silver;
-            this.pnlEmail.Controls.Add(this.panel6);
-            this.pnlEmail.Controls.Add(this.textBox4);
             this.pnlEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(139)))), ((int)(((byte)(172)))));
             this.pnlEmail.Location = new System.Drawing.Point(19, 340);
             this.pnlEmail.Name = "pnlEmail";
             this.pnlEmail.Size = new System.Drawing.Size(464, 3);
             this.pnlEmail.TabIndex = 33;
             // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(464, 2);
-            this.panel6.TabIndex = 28;
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Calibri", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.Black;
-            this.textBox4.Location = new System.Drawing.Point(0, -41);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(400, 85);
-            this.textBox4.TabIndex = 29;
-            this.textBox4.Text = "tên";
-            // 
             // pnlCategoryMember
             // 
             this.pnlCategoryMember.BackColor = System.Drawing.Color.Silver;
-            this.pnlCategoryMember.Controls.Add(this.panel5);
-            this.pnlCategoryMember.Controls.Add(this.textBox3);
             this.pnlCategoryMember.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(139)))), ((int)(((byte)(172)))));
             this.pnlCategoryMember.Location = new System.Drawing.Point(19, 270);
             this.pnlCategoryMember.Name = "pnlCategoryMember";
             this.pnlCategoryMember.Size = new System.Drawing.Size(464, 3);
             this.pnlCategoryMember.TabIndex = 31;
             // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(464, 2);
-            this.panel5.TabIndex = 28;
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Calibri", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.Location = new System.Drawing.Point(0, -41);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(400, 85);
-            this.textBox3.TabIndex = 29;
-            this.textBox3.Text = "tên";
-            // 
             // pnlName
             // 
             this.pnlName.BackColor = System.Drawing.Color.Silver;
-            this.pnlName.Controls.Add(this.panel2);
-            this.pnlName.Controls.Add(this.textBox1);
             this.pnlName.ForeColor = System.Drawing.Color.Red;
             this.pnlName.Location = new System.Drawing.Point(19, 53);
             this.pnlName.Name = "pnlName";
             this.pnlName.Size = new System.Drawing.Size(464, 3);
             this.pnlName.TabIndex = 27;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(464, 2);
-            this.panel2.TabIndex = 28;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Calibri", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(0, -41);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(400, 85);
-            this.textBox1.TabIndex = 29;
-            this.textBox1.Text = "tên";
             // 
             // txtPassword
             // 
@@ -334,33 +241,11 @@ namespace BTTH1
             // pnlUsername
             // 
             this.pnlUsername.BackColor = System.Drawing.Color.Silver;
-            this.pnlUsername.Controls.Add(this.panel4);
-            this.pnlUsername.Controls.Add(this.textBox2);
             this.pnlUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(139)))), ((int)(((byte)(172)))));
             this.pnlUsername.Location = new System.Drawing.Point(19, 123);
             this.pnlUsername.Name = "pnlUsername";
             this.pnlUsername.Size = new System.Drawing.Size(464, 3);
             this.pnlUsername.TabIndex = 31;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(464, 2);
-            this.panel4.TabIndex = 28;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Calibri", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(0, -41);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(400, 85);
-            this.textBox2.TabIndex = 29;
-            this.textBox2.Text = "tên";
             // 
             // txtUsername
             // 
@@ -395,33 +280,11 @@ namespace BTTH1
             // pnlAddress
             // 
             this.pnlAddress.BackColor = System.Drawing.Color.Silver;
-            this.pnlAddress.Controls.Add(this.panel8);
-            this.pnlAddress.Controls.Add(this.textBox6);
             this.pnlAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(139)))), ((int)(((byte)(172)))));
             this.pnlAddress.Location = new System.Drawing.Point(19, 480);
             this.pnlAddress.Name = "pnlAddress";
             this.pnlAddress.Size = new System.Drawing.Size(464, 3);
             this.pnlAddress.TabIndex = 32;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel8.Location = new System.Drawing.Point(0, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(464, 2);
-            this.panel8.TabIndex = 28;
-            // 
-            // textBox6
-            // 
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Calibri", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.ForeColor = System.Drawing.Color.Black;
-            this.textBox6.Location = new System.Drawing.Point(0, -41);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(400, 85);
-            this.textBox6.TabIndex = 29;
-            this.textBox6.Text = "tên";
             // 
             // txtEmail
             // 
@@ -441,33 +304,11 @@ namespace BTTH1
             // pnlPhone
             // 
             this.pnlPhone.BackColor = System.Drawing.Color.Silver;
-            this.pnlPhone.Controls.Add(this.panel7);
-            this.pnlPhone.Controls.Add(this.textBox5);
             this.pnlPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(139)))), ((int)(((byte)(172)))));
             this.pnlPhone.Location = new System.Drawing.Point(19, 410);
             this.pnlPhone.Name = "pnlPhone";
             this.pnlPhone.Size = new System.Drawing.Size(464, 3);
             this.pnlPhone.TabIndex = 32;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(464, 2);
-            this.panel7.TabIndex = 28;
-            // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Calibri", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.Black;
-            this.textBox5.Location = new System.Drawing.Point(0, -41);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(400, 85);
-            this.textBox5.TabIndex = 29;
-            this.textBox5.Text = "tên";
             // 
             // txtPhone
             // 
@@ -852,49 +693,20 @@ namespace BTTH1
             this.ptbAvatar.DragDrop += new System.Windows.Forms.DragEventHandler(this.ptbAvatar_DragDrop);
             this.ptbAvatar.DragEnter += new System.Windows.Forms.DragEventHandler(this.ptbAvatar_DragEnter);
             // 
-            // btnCancelUpdate
-            // 
-            this.btnCancelUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelUpdate.FlatAppearance.BorderSize = 2;
-            this.btnCancelUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelUpdate.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCancelUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(34)))), ((int)(((byte)(101)))));
-            this.btnCancelUpdate.Location = new System.Drawing.Point(608, 12);
-            this.btnCancelUpdate.Name = "btnCancelUpdate";
-            this.btnCancelUpdate.Size = new System.Drawing.Size(111, 51);
-            this.btnCancelUpdate.TabIndex = 35;
-            this.btnCancelUpdate.Text = "HỦY";
-            this.btnCancelUpdate.UseVisualStyleBackColor = true;
-            this.btnCancelUpdate.Click += new System.EventHandler(this.btnCancelUpdate_Click);
-            // 
-            // MemberUC
+            // fMemberUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(6);
-            this.Name = "MemberUC";
+            this.Name = "fMemberUC";
             this.Size = new System.Drawing.Size(1928, 1300);
             this.panel1.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             this.pnlEdit.ResumeLayout(false);
             this.pnlEdit.PerformLayout();
-            this.pnlPassword.ResumeLayout(false);
-            this.pnlPassword.PerformLayout();
-            this.pnlEmail.ResumeLayout(false);
-            this.pnlEmail.PerformLayout();
-            this.pnlCategoryMember.ResumeLayout(false);
-            this.pnlCategoryMember.PerformLayout();
-            this.pnlName.ResumeLayout(false);
-            this.pnlName.PerformLayout();
-            this.pnlUsername.ResumeLayout(false);
-            this.pnlUsername.PerformLayout();
-            this.pnlAddress.ResumeLayout(false);
-            this.pnlAddress.PerformLayout();
-            this.pnlPhone.ResumeLayout(false);
-            this.pnlPhone.PerformLayout();
             this.pnlView.ResumeLayout(false);
             this.pnlView.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -944,31 +756,17 @@ namespace BTTH1
         private System.Windows.Forms.Panel pnlEdit;
         private System.Windows.Forms.DateTimePicker dtpBirthday;
         private System.Windows.Forms.Panel pnlPassword;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Panel pnlEmail;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Panel pnlCategoryMember;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Panel pnlName;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Panel pnlUsername;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtCategoryMember;
         private System.Windows.Forms.Panel pnlAddress;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Panel pnlPhone;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Button btnCancelUpdate;

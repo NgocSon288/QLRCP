@@ -47,7 +47,7 @@ namespace BTTH1.Services
 
         public List<Film> GetAll()
         {
-            return _filmRepository.GetAll();
+            return _filmRepository.GetAll().Where(f=>f.Status).ToList();
         }
 
         public Film GetByID(Guid id)

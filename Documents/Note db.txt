@@ -84,22 +84,103 @@ Lỗi khi chọn hình ảnh,  ảnh đã được thay đổi trong member.Avat
 
 
 
+----------------
+- tăng số lược mua khi mua vé	xong
+
+chỉnh lại UI List view		xong
+-- cho show khi chay lần đầu	xong
+
+Load detail
+
+
+--------------------------------
+nhấn vào cập nhật, thêm mới khi nhấn về vẫn giữ trạng thái ban đầu		xong
+
+Load giao diện modify			xong
+	- Update:Load vào có dữ liệu	xong
+	- Create: Load trống		xong
+
+Cập nhật film	
+	- cập nhật DB 		xong
+	
+		
+
+thêm mới film		xong
+	- thêm DB		xong
+	- thêm vào listView	xong
+
+thông báo thành công 	xong
+
+cập nhật lại title	xong
+	- cập nhật thành tên phim	xong
+	- cập nhật button thành cập nhật		xong
+
+Lỗi UI parent Số	xong
+
+---------------------------------
+- Cập nhật UI detail trang parent,
+		+ tạo hàm public truyền vào film sau khi chắc chắn thì gọi lại hàm của cha
+	- cập nhật selectedItem của listView	
+
+	1) cập nhật
+		cập nhật hàng trong listview có ID đó
+		load lại viewdetail
+		thể loại phim không nằm trong filter thì ẩn đi
+	
+
+	2) thêm mới
+		Load lại từ đầu
+	
+--------------------------------------
+
+
+Xóa phim
+	- cập nhật status lại thành xóa		xong
+	- status film, roomFilm		xong
+	
+	
+
+-------------------------------------- 
+        public Guid RoomID { get; set; }
+
+        public Guid FilmID { get; set; }
+
+        public DateTime DateShow { get; set; }
+
+        public bool Status { get; set; }
+
+        public string Seat { get; set; }
+
+public Guid ID { get; set; }
+
+        public string Name { get; set; }
+
+        public int SeatMax { get; set; }
+
+        public int SeatCount { get; set; }
 
 
 
+--------------------------------------
+
+sort khi nhấn vào header
+
+ 
+-----------------------------------------
+
+Xòa roomFilm
+	+ cập nhật status = false
+	+ cập nhật list
+	+ cập nhật viewdetail
 
 
+Khi xóa hết
 
 
+-----------------
+Khi bấm hủy cập nhật thông tin cá nhân, trả lại hình ảnh ban đầu	xong
 
-
-
-
-
-
-
-
-
+Thứ tự các tab 	xong
 
 
 
